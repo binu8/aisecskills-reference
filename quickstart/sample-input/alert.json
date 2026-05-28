@@ -1,0 +1,19 @@
+{
+  "_comment": "Redacted sample alert. Replace field values with real data from your environment.",
+  "alert_id": "NE-0042",
+  "rule_name": "Brute Force Access Behavior Detected",
+  "severity": "high",
+  "source_ip": "10.4.12.88",
+  "destination_ip": "10.0.5.20",
+  "destination_hostname": "dc-primary.corp.internal",
+  "username": "j.smith",
+  "failed_logon_count": 347,
+  "time_window_minutes": 8,
+  "first_seen": "2026-01-15T09:14:22Z",
+  "last_seen": "2026-01-15T09:22:37Z",
+  "status": "new",
+  "asset_owner": "Finance",
+  "source_hostname": "ws-fin-042.corp.internal",
+  "threat_intel_match": false,
+  "additional_context": "No successful logon observed within the alert window. Source host is a standard finance workstation."
+}

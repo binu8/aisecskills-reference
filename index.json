@@ -1,0 +1,288 @@
+{
+  "schema_version": "1.0",
+  "skill_count": 40,
+  "license": "Apache-2.0",
+  "note": "Open reference sample. Full library and methodology: https://www.aisecurityskills.com",
+  "skills": [
+    {
+      "id": "triaging-security-alerts-in-splunk",
+      "name": "triaging-security-alerts-in-splunk",
+      "version": "1.0",
+      "subdomain": "soc-operations",
+      "summary": "Triages security alerts in Splunk Enterprise Security by classifying severity, investigating notable events, correlating related telemetry, and making escalation or closure decisions using SPL queries and the Incident Review dashboard. Use when SOC analysts face queued alerts from correlation searches, need to prioritize investigation order, or must document triage decisions for handoff to Tier 2/3 analysts."
+    },
+    {
+      "id": "performing-alert-triage-with-elastic-siem",
+      "name": "performing-alert-triage-with-elastic-siem",
+      "version": "1.0",
+      "subdomain": "soc-operations",
+      "summary": "Perform systematic alert triage in Elastic Security SIEM to rapidly classify, prioritize, and investigate security alerts for SOC operations."
+    },
+    {
+      "id": "analyzing-windows-event-logs-in-splunk",
+      "name": "analyzing-windows-event-logs-in-splunk",
+      "version": "1.0",
+      "subdomain": "soc-operations",
+      "summary": "Analyzes Windows Security, System, and Sysmon event logs in Splunk to detect authentication attacks, privilege escalation, persistence mechanisms, and lateral movement using SPL queries mapped to MITRE ATT&CK techniques. Use when SOC analysts need to investigate Windows-based threats, build detection queries, or perform forensic timeline analysis of Windows endpoints and domain controllers."
+    },
+    {
+      "id": "analyzing-powershell-script-block-logging",
+      "name": "analyzing-powershell-script-block-logging",
+      "version": "1.0",
+      "subdomain": "security-operations",
+      "summary": "Parse Windows PowerShell Script Block Logs (Event ID 4104) from EVTX files to detect obfuscated commands, encoded payloads, and living-off-the-land techniques. Uses python-evtx to extract and reconstruct multi-block scripts, applies entropy analysis and pattern matching for Base64-encoded commands, Invoke-Expression abuse, download cradles, and AMSI bypass attempts."
+    },
+    {
+      "id": "implementing-siem-use-cases-for-detection",
+      "name": "implementing-siem-use-cases-for-detection",
+      "version": "1.0",
+      "subdomain": "soc-operations",
+      "summary": "Implements SIEM detection use cases by designing correlation rules, threshold alerts, and behavioral analytics mapped to MITRE ATT&CK techniques across Splunk, Elastic, and Sentinel. Use when SOC teams need to expand detection coverage, formalize use case lifecycle management, or build a detection library aligned to organizational threat profile."
+    },
+    {
+      "id": "implementing-soar-playbook-for-phishing",
+      "name": "implementing-soar-playbook-for-phishing",
+      "version": "1.0",
+      "subdomain": "security-operations",
+      "summary": "Automate phishing incident response using Splunk SOAR REST API to create containers, add artifacts, and trigger playbooks"
+    },
+    {
+      "id": "investigating-phishing-email-incident",
+      "name": "investigating-phishing-email-incident",
+      "version": "1.0",
+      "subdomain": "soc-operations",
+      "summary": "Investigates phishing email incidents from initial user report through header analysis, URL/attachment detonation, impacted user identification, and containment actions using SOC tools like Splunk, Microsoft Defender, and sandbox analysis platforms. Use when a reported phishing email requires full incident investigation to determine scope and impact."
+    },
+    {
+      "id": "performing-false-positive-reduction-in-siem",
+      "name": "performing-false-positive-reduction-in-siem",
+      "version": "1.0",
+      "subdomain": "soc-operations",
+      "summary": "Perform systematic SIEM false positive reduction through rule tuning, threshold adjustment, correlation refinement, and threat intelligence enrichment to combat alert fatigue."
+    },
+    {
+      "id": "building-incident-response-playbook",
+      "name": "building-incident-response-playbook",
+      "version": "1.0.0",
+      "subdomain": "incident-response",
+      "summary": "Designs and documents structured incident response playbooks that define step-by-step procedures for specific incident types aligned with NIST SP 800-61r3 and SANS PICERL frameworks. Covers playbook structure, decision trees, escalation criteria, RACI matrices, and integration with SOAR platforms. Activates for requests involving IR playbook creation, incident response procedure documentation, response runbook development, or SOAR playbook design."
+    },
+    {
+      "id": "triaging-security-incident-with-ir-playbook",
+      "name": "triaging-security-incident-with-ir-playbook",
+      "version": "1.0",
+      "subdomain": "incident-response",
+      "summary": "Classify and prioritize security incidents using structured IR playbooks to determine severity, assign response teams, and initiate appropriate response procedures."
+    },
+    {
+      "id": "containing-active-breach",
+      "name": "containing-active-breach",
+      "version": "1.0.0",
+      "subdomain": "incident-response",
+      "summary": "Executes containment strategies to stop active adversary operations and prevent lateral movement during a confirmed security breach. Implements short-term and long-term containment using network segmentation, endpoint isolation, credential revocation, and access control modifications. Activates for requests involving breach containment, lateral movement prevention, network isolation, active threat containment, or live incident response."
+    },
+    {
+      "id": "collecting-volatile-evidence-from-compromised-host",
+      "name": "collecting-volatile-evidence-from-compromised-host",
+      "version": "1.0",
+      "subdomain": "incident-response",
+      "summary": "Collect volatile forensic evidence from a compromised system following order of volatility, preserving memory, network connections, processes, and system state before they are lost."
+    },
+    {
+      "id": "conducting-post-incident-lessons-learned",
+      "name": "conducting-post-incident-lessons-learned",
+      "version": "1.0",
+      "subdomain": "incident-response",
+      "summary": "Facilitate structured post-incident reviews to identify root causes, document what worked and failed, and produce actionable recommendations to improve future incident response."
+    },
+    {
+      "id": "analyzing-threat-actor-ttps-with-mitre-attack",
+      "name": "analyzing-threat-actor-ttps-with-mitre-attack",
+      "version": "1.0",
+      "subdomain": "threat-intelligence",
+      "summary": "MITRE ATT&CK is a globally-accessible knowledge base of adversary tactics, techniques, and procedures (TTPs) based on real-world observations. This skill covers systematically mapping threat actor beh"
+    },
+    {
+      "id": "analyzing-indicators-of-compromise",
+      "name": "analyzing-indicators-of-compromise",
+      "version": "1.0.0",
+      "subdomain": "threat-intelligence",
+      "summary": "Analyzes indicators of compromise (IOCs) including IP addresses, domains, file hashes, URLs, and email artifacts to determine maliciousness confidence, campaign attribution, and blocking priority. Use when triaging IOCs from phishing emails, security alerts, or external threat feeds; enriching raw IOCs with multi-source intelligence; or making block/monitor/whitelist decisions. Activates for requests involving VirusTotal, AbuseIPDB, MalwareBazaar, MISP, or IOC enrichment pipelines."
+    },
+    {
+      "id": "collecting-threat-intelligence-with-misp",
+      "name": "collecting-threat-intelligence-with-misp",
+      "version": "1.0",
+      "subdomain": "threat-intelligence",
+      "summary": "MISP (Malware Information Sharing Platform) is an open-source threat intelligence platform for gathering, sharing, storing, and correlating Indicators of Compromise (IOCs) of targeted attacks, threat"
+    },
+    {
+      "id": "generating-threat-intelligence-reports",
+      "name": "generating-threat-intelligence-reports",
+      "version": "1.0.0",
+      "subdomain": "threat-intelligence",
+      "summary": "Generates structured cyber threat intelligence reports at strategic, operational, and tactical levels tailored to specific audiences including executives, security operations teams, and technical analysts. Use when producing finished intelligence products from raw collection data, creating sector threat briefings, or delivering post-incident intelligence assessments. Activates for requests involving CTI report writing, threat briefings, intelligence products, finished intelligence, or executive security reporting."
+    },
+    {
+      "id": "performing-malware-hash-enrichment-with-virustotal",
+      "name": "performing-malware-hash-enrichment-with-virustotal",
+      "version": "1.0",
+      "subdomain": "threat-intelligence",
+      "summary": "Enrich malware file hashes using the VirusTotal API to retrieve detection rates, behavioral analysis, YARA matches, and contextual threat intelligence for incident triage and IOC validation."
+    },
+    {
+      "id": "building-detection-rules-with-sigma",
+      "name": "building-detection-rules-with-sigma",
+      "version": "1.0",
+      "subdomain": "soc-operations",
+      "summary": "Builds vendor-agnostic detection rules using the Sigma rule format for threat detection across SIEM platforms including Splunk, Elastic, and Microsoft Sentinel. Use when creating portable detection logic from threat intelligence, mapping rules to MITRE ATT&CK techniques, or converting community Sigma rules into platform-specific queries using sigmac or pySigma backends."
+    },
+    {
+      "id": "detecting-living-off-the-land-attacks",
+      "name": "detecting-living-off-the-land-attacks",
+      "version": "1.0",
+      "subdomain": "threat-detection",
+      "summary": "Detect abuse of legitimate Windows binaries (LOLBins) used for living off the land attacks. Monitors process creation, command-line arguments, and parent-child relationships to identify suspicious LOLBin execution patterns."
+    },
+    {
+      "id": "detecting-credential-dumping-techniques",
+      "name": "detecting-credential-dumping-techniques",
+      "version": "1.0",
+      "subdomain": "threat-detection",
+      "summary": "Detect LSASS credential dumping, SAM database extraction, and NTDS.dit theft using Sysmon Event ID 10, Windows Security logs, and SIEM correlation rules"
+    },
+    {
+      "id": "implementing-siem-correlation-rules-for-apt",
+      "name": "implementing-siem-correlation-rules-for-apt",
+      "version": "1.0",
+      "subdomain": "security-operations",
+      "summary": "Write multi-event correlation rules that detect APT lateral movement by chaining Windows authentication events, process execution telemetry, and network connection logs across hosts. Uses Splunk SPL and Sigma rule format to correlate Event IDs 4624, 4648, 4688, and Sysmon Events 1/3 within sliding time windows to surface attack sequences invisible to single-event detections."
+    },
+    {
+      "id": "performing-cve-prioritization-with-kev-catalog",
+      "name": "performing-cve-prioritization-with-kev-catalog",
+      "version": "1.0",
+      "subdomain": "vulnerability-management",
+      "summary": "Leverage the CISA Known Exploited Vulnerabilities catalog alongside EPSS and CVSS to prioritize CVE remediation based on real-world exploitation evidence."
+    },
+    {
+      "id": "scanning-infrastructure-with-nessus",
+      "name": "scanning-infrastructure-with-nessus",
+      "version": "1.0",
+      "subdomain": "vulnerability-management",
+      "summary": "Tenable Nessus is the industry-leading vulnerability scanner used to identify security weaknesses across network infrastructure including servers, workstations, network devices, and operating systems."
+    },
+    {
+      "id": "prioritizing-vulnerabilities-with-cvss-scoring",
+      "name": "prioritizing-vulnerabilities-with-cvss-scoring",
+      "version": "1.0",
+      "subdomain": "vulnerability-management",
+      "summary": "The Common Vulnerability Scoring System (CVSS) is the industry standard framework maintained by FIRST (Forum of Incident Response and Security Teams) for assessing vulnerability severity. CVSS v4.0 (r"
+    },
+    {
+      "id": "implementing-patch-management-workflow",
+      "name": "implementing-patch-management-workflow",
+      "version": "1.0",
+      "subdomain": "vulnerability-management",
+      "summary": "Patch management is the systematic process of identifying, testing, deploying, and verifying software updates to remediate vulnerabilities across an organization's IT infrastructure. An effective patc"
+    },
+    {
+      "id": "performing-access-review-and-certification",
+      "name": "performing-access-review-and-certification",
+      "version": "1.0",
+      "subdomain": "identity-access-management",
+      "summary": "Conduct systematic access reviews and certifications to ensure users have appropriate access rights aligned with their roles. This skill covers review campaign design, reviewer selection, risk-based p"
+    },
+    {
+      "id": "implementing-just-in-time-access-provisioning",
+      "name": "implementing-just-in-time-access-provisioning",
+      "version": "1.0",
+      "subdomain": "identity-access-management",
+      "summary": "Implement Just-In-Time (JIT) access provisioning to eliminate standing privileges by granting temporary, time-bound access only when needed. This skill covers JIT architecture design, approval workflo"
+    },
+    {
+      "id": "performing-service-account-audit",
+      "name": "performing-service-account-audit",
+      "version": "1.0",
+      "subdomain": "identity-access-management",
+      "summary": "Audit service accounts across enterprise infrastructure to identify orphaned, over-privileged, and non-compliant accounts. This skill covers discovery of service accounts in Active Directory, cloud pl"
+    },
+    {
+      "id": "configuring-multi-factor-authentication-with-duo",
+      "name": "configuring-multi-factor-authentication-with-duo",
+      "version": "1.0",
+      "subdomain": "identity-access-management",
+      "summary": "Deploy Cisco Duo multi-factor authentication across enterprise applications, VPN, RDP, and SSH access points. This skill covers Duo integration methods, adaptive authentication policies, device trust"
+    },
+    {
+      "id": "auditing-aws-s3-bucket-permissions",
+      "name": "auditing-aws-s3-bucket-permissions",
+      "version": "1.0",
+      "subdomain": "cloud-security",
+      "summary": "Systematically audit AWS S3 bucket permissions to identify publicly accessible buckets, overly permissive ACLs, misconfigured bucket policies, and missing encryption settings using AWS CLI, S3audit, and Prowler to enforce least-privilege data access controls."
+    },
+    {
+      "id": "detecting-aws-cloudtrail-anomalies",
+      "name": "detecting-aws-cloudtrail-anomalies",
+      "version": "1.0",
+      "subdomain": "cloud-security",
+      "summary": "Detect unusual API call patterns in AWS CloudTrail logs using boto3, statistical baselining, and behavioral analysis to identify credential compromise, privilege escalation, and unauthorized resource access."
+    },
+    {
+      "id": "implementing-cloud-security-posture-management",
+      "name": "implementing-cloud-security-posture-management",
+      "version": "1.0",
+      "subdomain": "cloud-security",
+      "summary": "Implementing Cloud Security Posture Management (CSPM) to continuously monitor multi-cloud environments for misconfigurations, compliance violations, and security risks using Prowler, ScoutSuite, AWS Security Hub, Azure Defender, and GCP Security Command Center."
+    },
+    {
+      "id": "detecting-compromised-cloud-credentials",
+      "name": "detecting-compromised-cloud-credentials",
+      "version": "1.0",
+      "subdomain": "cloud-security",
+      "summary": "Detecting compromised cloud credentials across AWS, Azure, and GCP by analyzing anomalous API activity, impossible travel patterns, unauthorized resource provisioning, and credential abuse indicators using GuardDuty, Defender for Identity, and SCC Event Threat Detection."
+    },
+    {
+      "id": "performing-nist-csf-maturity-assessment",
+      "name": "performing-nist-csf-maturity-assessment",
+      "version": "1.0",
+      "subdomain": "compliance-governance",
+      "summary": ">- The NIST Cybersecurity Framework (CSF) 2.0, released in February 2024, provides a comprehensive taxonomy for managing cybersecurity risk through six core Functions - Govern, Identify, Protect, Detect, Respond, and Recover. This skill covers conducting a maturity assessment against the CSF using Implementation Tiers to measure organizational cybersecurity posture and create improvement roadmaps."
+    },
+    {
+      "id": "implementing-iso-27001-information-security-management",
+      "name": "implementing-iso-27001-information-security-management",
+      "version": "1.0",
+      "subdomain": "compliance-governance",
+      "summary": "ISO/IEC 27001:2022 is the international standard for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS). This skill covers the complete"
+    },
+    {
+      "id": "implementing-gdpr-data-protection-controls",
+      "name": "implementing-gdpr-data-protection-controls",
+      "version": "1.0",
+      "subdomain": "compliance-governance",
+      "summary": "The General Data Protection Regulation (EU) 2016/679 (GDPR) is the EU's comprehensive data protection law governing the collection, processing, storage, and transfer of personal data. This skill cover"
+    },
+    {
+      "id": "analyzing-cyber-kill-chain",
+      "name": "analyzing-cyber-kill-chain",
+      "version": "1.0.0",
+      "subdomain": "threat-intelligence",
+      "summary": "Analyzes intrusion activity against the Lockheed Martin Cyber Kill Chain framework to identify which phases an adversary has completed, where defenses succeeded or failed, and what controls would have interrupted the attack at earlier phases. Use when conducting post-incident analysis, building prevention-focused security controls, or mapping detection gaps to kill chain phases. Activates for requests involving kill chain analysis, intrusion kill chain, attack phase mapping, or Lockheed Martin kill chain framework."
+    },
+    {
+      "id": "implementing-mitre-attack-coverage-mapping",
+      "name": "implementing-mitre-attack-coverage-mapping",
+      "version": "1.0",
+      "subdomain": "soc-operations",
+      "summary": "Implement MITRE ATT&CK coverage mapping to identify detection gaps, prioritize rule development, and measure SOC detection maturity against adversary techniques."
+    },
+    {
+      "id": "building-soc-metrics-and-kpi-tracking",
+      "name": "building-soc-metrics-and-kpi-tracking",
+      "version": "1.0",
+      "subdomain": "soc-operations",
+      "summary": "Builds SOC performance metrics and KPI tracking dashboards measuring Mean Time to Detect (MTTD), Mean Time to Respond (MTTR), alert quality ratios, analyst productivity, and detection coverage using SIEM data. Use when SOC leadership needs operational visibility, continuous improvement tracking, or executive-level reporting on security operations effectiveness."
+    }
+  ]
+}
