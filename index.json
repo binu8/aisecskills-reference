@@ -1,288 +1,563 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "skill_count": 40,
   "license": "Apache-2.0",
-  "note": "Open reference sample. Full library and methodology: https://www.aisecurityskills.com",
+  "note": "aicm_controls and ssrm_ownership are proposed mappings \u2014 verify against AICM v1.0.3 before formal self-assessments.",
   "skills": [
     {
-      "id": "triaging-security-alerts-in-splunk",
-      "name": "triaging-security-alerts-in-splunk",
+      "id": "applying-zero-trust-to-ai-workloads",
+      "name": "applying-zero-trust-to-ai-workloads",
       "version": "1.0",
-      "subdomain": "soc-operations",
-      "summary": "Triages security alerts in Splunk Enterprise Security by classifying severity, investigating notable events, correlating related telemetry, and making escalation or closure decisions using SPL queries and the Incident Review dashboard. Use when SOC analysts face queued alerts from correlation searches, need to prioritize investigation order, or must document triage decisions for handoff to Tier 2/3 analysts."
+      "domain": "I&S",
+      "aicm_controls": [
+        "I&S-04",
+        "IAM-03"
+      ],
+      "ssrm_ownership": "Shared Across Supply Chain",
+      "aismm_category": "Infrastructure Security & Resilience",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to apply zero-trust principles to AI workload networking \u2014 ensuring no implicit trust between AI services, agents, and data stores, with continuous verification at every layer."
     },
     {
-      "id": "performing-alert-triage-with-elastic-siem",
-      "name": "performing-alert-triage-with-elastic-siem",
+      "id": "assessing-jailbreak-resistance-pre-deployment",
+      "name": "assessing-jailbreak-resistance-pre-deployment",
       "version": "1.0",
-      "subdomain": "soc-operations",
-      "summary": "Perform systematic alert triage in Elastic Security SIEM to rapidly classify, prioritize, and investigate security alerts for SOC operations."
+      "domain": "TVM",
+      "aicm_controls": [
+        "TVM-03",
+        "AIS-09"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "App Security",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to quantitatively score a deployed or pre-production LLM system's resistance to jailbreak attempts before go-live, producing a pass/fail safety gate result."
     },
     {
-      "id": "analyzing-windows-event-logs-in-splunk",
-      "name": "analyzing-windows-event-logs-in-splunk",
+      "id": "assessing-third-party-model-and-provider-risk",
+      "name": "assessing-third-party-model-and-provider-risk",
       "version": "1.0",
-      "subdomain": "soc-operations",
-      "summary": "Analyzes Windows Security, System, and Sysmon event logs in Splunk to detect authentication attacks, privilege escalation, persistence mechanisms, and lateral movement using SPL queries mapped to MITRE ATT&CK techniques. Use when SOC analysts need to investigate Windows-based threats, build detection queries, or perform forensic timeline analysis of Windows endpoints and domain controllers."
+      "domain": "STA",
+      "aicm_controls": [
+        "STA-03",
+        "GRC-08"
+      ],
+      "ssrm_ownership": "AIC-Owned",
+      "aismm_category": "Risk & Provider Assessment & Management",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to evaluate the security, privacy, and compliance risks of adopting a third-party AI model provider, API service, or pre-trained model before onboarding."
     },
     {
-      "id": "analyzing-powershell-script-block-logging",
-      "name": "analyzing-powershell-script-block-logging",
+      "id": "building-an-ai-incident-response-playbook",
+      "name": "building-an-ai-incident-response-playbook",
       "version": "1.0",
-      "subdomain": "security-operations",
-      "summary": "Parse Windows PowerShell Script Block Logs (Event ID 4104) from EVTX files to detect obfuscated commands, encoded payloads, and living-off-the-land techniques. Uses python-evtx to extract and reconstruct multi-block scripts, applies entropy analysis and pattern matching for Base64-encoded commands, Invoke-Expression abuse, download cradles, and AMSI bypass attempts."
+      "domain": "SEF",
+      "aicm_controls": [
+        "SEF-03",
+        "SEF-06"
+      ],
+      "ssrm_ownership": "AIC-Owned",
+      "aismm_category": "Incident Response",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to create or update an incident response playbook that covers AI-specific incident types \u2014 model compromise, prompt injection attacks, data leakage through LLM outputs, and agent credential theft."
     },
     {
-      "id": "implementing-siem-use-cases-for-detection",
-      "name": "implementing-siem-use-cases-for-detection",
+      "id": "building-an-ai-risk-register",
+      "name": "building-an-ai-risk-register",
       "version": "1.0",
-      "subdomain": "soc-operations",
-      "summary": "Implements SIEM detection use cases by designing correlation rules, threshold alerts, and behavioral analytics mapped to MITRE ATT&CK techniques across Splunk, Elastic, and Sentinel. Use when SOC teams need to expand detection coverage, formalize use case lifecycle management, or build a detection library aligned to organizational threat profile."
+      "domain": "GRC",
+      "aicm_controls": [
+        "GRC-02",
+        "GRC-03"
+      ],
+      "ssrm_ownership": "AIC-Owned",
+      "aismm_category": "Risk & Provider Assessment & Management",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to create or maintain a structured AI risk register that captures, scores, and tracks mitigations for identified risks across an organization's AI portfolio."
     },
     {
-      "id": "implementing-soar-playbook-for-phishing",
-      "name": "implementing-soar-playbook-for-phishing",
+      "id": "capturing-agent-action-and-delegation-telemetry",
+      "name": "capturing-agent-action-and-delegation-telemetry",
       "version": "1.0",
-      "subdomain": "security-operations",
-      "summary": "Automate phishing incident response using Splunk SOAR REST API to create containers, add artifacts, and trigger playbooks"
+      "domain": "LOG",
+      "aicm_controls": [
+        "LOG-05",
+        "LOG-13"
+      ],
+      "ssrm_ownership": "Shared OSP-AP",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to instrument an AI agent system to capture every tool call, sub-agent delegation, and state transition as structured telemetry for security investigation and compliance purposes."
     },
     {
-      "id": "investigating-phishing-email-incident",
-      "name": "investigating-phishing-email-incident",
+      "id": "classifying-ai-systems-under-eu-ai-act",
+      "name": "classifying-ai-systems-under-eu-ai-act",
       "version": "1.0",
-      "subdomain": "soc-operations",
-      "summary": "Investigates phishing email incidents from initial user report through header analysis, URL/attachment detonation, impacted user identification, and containment actions using SOC tools like Splunk, Microsoft Defender, and sandbox analysis platforms. Use when a reported phishing email requires full incident investigation to determine scope and impact."
+      "domain": "GRC",
+      "aicm_controls": [
+        "GRC-05",
+        "A&A-04"
+      ],
+      "ssrm_ownership": "AIC-Owned",
+      "aismm_category": "Privacy, Compliance and Audit",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to classify an AI system under the EU AI Act risk tiers \u2014 unacceptable, high-risk, limited, or minimal \u2014 and determine the resulting compliance obligations."
     },
     {
-      "id": "performing-false-positive-reduction-in-siem",
-      "name": "performing-false-positive-reduction-in-siem",
+      "id": "completing-the-ai-caiq-self-assessment",
+      "name": "completing-the-ai-caiq-self-assessment",
       "version": "1.0",
-      "subdomain": "soc-operations",
-      "summary": "Perform systematic SIEM false positive reduction through rule tuning, threshold adjustment, correlation refinement, and threat intelligence enrichment to combat alert fatigue."
+      "domain": "A&A",
+      "aicm_controls": [
+        "A&A-01",
+        "A&A-06"
+      ],
+      "ssrm_ownership": "AIC-Owned",
+      "aismm_category": "Privacy, Compliance and Audit",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to complete the CSA AI Consensus Assessments Initiative Questionnaire (AI-CAIQ) for your organization, producing a shareable, verifiable self-attestation of AI security controls."
     },
     {
-      "id": "building-incident-response-playbook",
-      "name": "building-incident-response-playbook",
-      "version": "1.0.0",
-      "subdomain": "incident-response",
-      "summary": "Designs and documents structured incident response playbooks that define step-by-step procedures for specific incident types aligned with NIST SP 800-61r3 and SANS PICERL frameworks. Covers playbook structure, decision trees, escalation criteria, RACI matrices, and integration with SOAR platforms. Activates for requests involving IR playbook creation, incident response procedure documentation, response runbook development, or SOAR playbook design."
-    },
-    {
-      "id": "triaging-security-incident-with-ir-playbook",
-      "name": "triaging-security-incident-with-ir-playbook",
+      "id": "conducting-adversarial-robustness-testing",
+      "name": "conducting-adversarial-robustness-testing",
       "version": "1.0",
-      "subdomain": "incident-response",
-      "summary": "Classify and prioritize security incidents using structured IR playbooks to determine severity, assign response teams, and initiate appropriate response procedures."
+      "domain": "MDS",
+      "aicm_controls": [
+        "MDS-05"
+      ],
+      "ssrm_ownership": "MP-Owned",
+      "aismm_category": "Model Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to systematically measure how an AI model responds to adversarial inputs \u2014 perturbations, out-of-distribution samples, and evasion attacks \u2014 before production deployment."
     },
     {
-      "id": "containing-active-breach",
-      "name": "containing-active-breach",
-      "version": "1.0.0",
-      "subdomain": "incident-response",
-      "summary": "Executes containment strategies to stop active adversary operations and prevent lateral movement during a confirmed security breach. Implements short-term and long-term containment using network segmentation, endpoint isolation, credential revocation, and access control modifications. Activates for requests involving breach containment, lateral movement prevention, network isolation, active threat containment, or live incident response."
-    },
-    {
-      "id": "collecting-volatile-evidence-from-compromised-host",
-      "name": "collecting-volatile-evidence-from-compromised-host",
+      "id": "conducting-an-aicm-control-assessment",
+      "name": "conducting-an-aicm-control-assessment",
       "version": "1.0",
-      "subdomain": "incident-response",
-      "summary": "Collect volatile forensic evidence from a compromised system following order of volatility, preserving memory, network connections, processes, and system state before they are lost."
+      "domain": "A&A",
+      "aicm_controls": [
+        "A&A-02",
+        "A&A-05"
+      ],
+      "ssrm_ownership": "AIC-Owned",
+      "aismm_category": "Privacy, Compliance and Audit",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to conduct a structured assessment of your organization's AI controls against the CSA AICM control framework, producing a scored maturity profile and gap remediation plan."
     },
     {
-      "id": "conducting-post-incident-lessons-learned",
-      "name": "conducting-post-incident-lessons-learned",
+      "id": "defending-against-prompt-injection",
+      "name": "defending-against-prompt-injection",
       "version": "1.0",
-      "subdomain": "incident-response",
-      "summary": "Facilitate structured post-incident reviews to identify root causes, document what worked and failed, and produce actionable recommendations to improve future incident response."
+      "domain": "AIS",
+      "aicm_controls": [
+        "AIS-08"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "App Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to harden an LLM application against prompt injection attacks, where adversarial content in user inputs or retrieved documents attempts to override system instructions or exfiltrate data."
     },
     {
-      "id": "analyzing-threat-actor-ttps-with-mitre-attack",
-      "name": "analyzing-threat-actor-ttps-with-mitre-attack",
+      "id": "deploying-llm-output-guardrails",
+      "name": "deploying-llm-output-guardrails",
       "version": "1.0",
-      "subdomain": "threat-intelligence",
-      "summary": "MITRE ATT&CK is a globally-accessible knowledge base of adversary tactics, techniques, and procedures (TTPs) based on real-world observations. This skill covers systematically mapping threat actor beh"
+      "domain": "AIS",
+      "aicm_controls": [
+        "AIS-09"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "App Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to intercept, classify, and block or rewrite unsafe, off-topic, or policy-violating LLM outputs before they reach end users, using layered guardrail controls."
     },
     {
-      "id": "analyzing-indicators-of-compromise",
-      "name": "analyzing-indicators-of-compromise",
-      "version": "1.0.0",
-      "subdomain": "threat-intelligence",
-      "summary": "Analyzes indicators of compromise (IOCs) including IP addresses, domains, file hashes, URLs, and email artifacts to determine maliciousness confidence, campaign attribution, and blocking priority. Use when triaging IOCs from phishing emails, security alerts, or external threat feeds; enriching raw IOCs with multi-source intelligence; or making block/monitor/whitelist decisions. Activates for requests involving VirusTotal, AbuseIPDB, MalwareBazaar, MISP, or IOC enrichment pipelines."
-    },
-    {
-      "id": "collecting-threat-intelligence-with-misp",
-      "name": "collecting-threat-intelligence-with-misp",
+      "id": "designing-ai-service-failover-and-resilience",
+      "name": "designing-ai-service-failover-and-resilience",
       "version": "1.0",
-      "subdomain": "threat-intelligence",
-      "summary": "MISP (Malware Information Sharing Platform) is an open-source threat intelligence platform for gathering, sharing, storing, and correlating Indicators of Compromise (IOCs) of targeted attacks, threat"
+      "domain": "BCR",
+      "aicm_controls": [
+        "BCR-03",
+        "BCR-08"
+      ],
+      "ssrm_ownership": "Shared OSP-AP",
+      "aismm_category": "Infrastructure Security & Resilience",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to design failover and resilience patterns for AI services \u2014 including LLM API fallback, model endpoint redundancy, and graceful degradation under provider outages."
     },
     {
-      "id": "generating-threat-intelligence-reports",
-      "name": "generating-threat-intelligence-reports",
-      "version": "1.0.0",
-      "subdomain": "threat-intelligence",
-      "summary": "Generates structured cyber threat intelligence reports at strategic, operational, and tactical levels tailored to specific audiences including executives, security operations teams, and technical analysts. Use when producing finished intelligence products from raw collection data, creating sector threat briefings, or delivering post-incident intelligence assessments. Activates for requests involving CTI report writing, threat briefings, intelligence products, finished intelligence, or executive security reporting."
-    },
-    {
-      "id": "performing-malware-hash-enrichment-with-virustotal",
-      "name": "performing-malware-hash-enrichment-with-virustotal",
+      "id": "detecting-prompt-injection-and-jailbreak-attempts",
+      "name": "detecting-prompt-injection-and-jailbreak-attempts",
       "version": "1.0",
-      "subdomain": "threat-intelligence",
-      "summary": "Enrich malware file hashes using the VirusTotal API to retrieve detection rates, behavioral analysis, YARA matches, and contextual threat intelligence for incident triage and IOC validation."
+      "domain": "LOG",
+      "aicm_controls": [
+        "LOG-08",
+        "AIS-08"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to monitor LLM application logs for prompt injection and jailbreak attempts in real time, alert on patterns, and feed detections into a SIEM for incident response."
     },
     {
-      "id": "building-detection-rules-with-sigma",
-      "name": "building-detection-rules-with-sigma",
+      "id": "enabling-model-and-data-portability-and-export",
+      "name": "enabling-model-and-data-portability-and-export",
       "version": "1.0",
-      "subdomain": "soc-operations",
-      "summary": "Builds vendor-agnostic detection rules using the Sigma rule format for threat detection across SIEM platforms including Splunk, Elastic, and Microsoft Sentinel. Use when creating portable detection logic from threat intelligence, mapping rules to MITRE ATT&CK techniques, or converting community Sigma rules into platform-specific queries using sigmac or pySigma backends."
+      "domain": "IPY",
+      "aicm_controls": [
+        "IPY-02",
+        "IPY-04"
+      ],
+      "ssrm_ownership": "Shared MP-OSP",
+      "aismm_category": "Data Security",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to implement model and training data export capabilities so that an organization can migrate away from a provider, exercise data portability rights, or fulfill GDPR data export obligations."
     },
     {
-      "id": "detecting-living-off-the-land-attacks",
-      "name": "detecting-living-off-the-land-attacks",
+      "id": "establishing-ai-acceptable-use-and-developer-training",
+      "name": "establishing-ai-acceptable-use-and-developer-training",
       "version": "1.0",
-      "subdomain": "threat-detection",
-      "summary": "Detect abuse of legitimate Windows binaries (LOLBins) used for living off the land attacks. Monitors process creation, command-line arguments, and parent-child relationships to identify suspicious LOLBin execution patterns."
+      "domain": "HRS",
+      "aicm_controls": [
+        "HRS-04",
+        "HRS-11"
+      ],
+      "ssrm_ownership": "AIC-Owned",
+      "aismm_category": "Governance",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to create an AI acceptable use policy, security training curriculum, and attestation process for developers and staff who build or use AI systems."
     },
     {
-      "id": "detecting-credential-dumping-techniques",
-      "name": "detecting-credential-dumping-techniques",
+      "id": "evaluating-model-safety-bias-and-harm",
+      "name": "evaluating-model-safety-bias-and-harm",
       "version": "1.0",
-      "subdomain": "threat-detection",
-      "summary": "Detect LSASS credential dumping, SAM database extraction, and NTDS.dit theft using Sysmon Event ID 10, Windows Security logs, and SIEM correlation rules"
+      "domain": "MDS",
+      "aicm_controls": [
+        "MDS-09"
+      ],
+      "ssrm_ownership": "MP-Owned",
+      "aismm_category": "Model Security",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to systematically evaluate an AI model for safety failures, demographic bias, and harmful output potential before releasing it to production or a broader audience."
     },
     {
-      "id": "implementing-siem-correlation-rules-for-apt",
-      "name": "implementing-siem-correlation-rules-for-apt",
+      "id": "generating-an-ai-bill-of-materials",
+      "name": "generating-an-ai-bill-of-materials",
       "version": "1.0",
-      "subdomain": "security-operations",
-      "summary": "Write multi-event correlation rules that detect APT lateral movement by chaining Windows authentication events, process execution telemetry, and network connection logs across hosts. Uses Splunk SPL and Sigma rule format to correlate Event IDs 4624, 4648, 4688, and Sysmon Events 1/3 within sliding time windows to surface attack sequences invisible to single-event detections."
+      "domain": "STA",
+      "aicm_controls": [
+        "STA-07",
+        "STA-09"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "AI Supported Development & Supply Chain Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to produce a machine-readable AI Bill of Materials that inventories all models, datasets, libraries, and supply chain dependencies for an AI system deployment."
     },
     {
-      "id": "performing-cve-prioritization-with-kev-catalog",
-      "name": "performing-cve-prioritization-with-kev-catalog",
+      "id": "governing-ai-coding-assistant-endpoints",
+      "name": "governing-ai-coding-assistant-endpoints",
       "version": "1.0",
-      "subdomain": "vulnerability-management",
-      "summary": "Leverage the CISA Known Exploited Vulnerabilities catalog alongside EPSS and CVSS to prioritize CVE remediation based on real-world exploitation evidence."
+      "domain": "UEM",
+      "aicm_controls": [
+        "UEM-03",
+        "UEM-09"
+      ],
+      "ssrm_ownership": "AIC-Owned",
+      "aismm_category": "Organization Management",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to govern which AI coding assistant endpoints developers may connect to from managed devices, preventing data leakage to unapproved external AI services through IDE plugins and CLI tools."
     },
     {
-      "id": "scanning-infrastructure-with-nessus",
-      "name": "scanning-infrastructure-with-nessus",
+      "id": "hardening-agent-orchestration-against-drift",
+      "name": "hardening-agent-orchestration-against-drift",
       "version": "1.0",
-      "subdomain": "vulnerability-management",
-      "summary": "Tenable Nessus is the industry-leading vulnerability scanner used to identify security weaknesses across network infrastructure including servers, workstations, network devices, and operating systems."
+      "domain": "AIS",
+      "aicm_controls": [
+        "AIS-08",
+        "AIS-09"
+      ],
+      "ssrm_ownership": "OSP-Owned",
+      "aismm_category": "App Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to prevent an AI agent orchestration system from drifting outside its intended scope through goal hijacking, runaway loops, or unauthorized sub-agent delegation."
     },
     {
-      "id": "prioritizing-vulnerabilities-with-cvss-scoring",
-      "name": "prioritizing-vulnerabilities-with-cvss-scoring",
+      "id": "implementing-on-behalf-of-delegation-and-consent",
+      "name": "implementing-on-behalf-of-delegation-and-consent",
       "version": "1.0",
-      "subdomain": "vulnerability-management",
-      "summary": "The Common Vulnerability Scoring System (CVSS) is the industry standard framework maintained by FIRST (Forum of Incident Response and Security Teams) for assessing vulnerability severity. CVSS v4.0 (r"
+      "domain": "IAM",
+      "aicm_controls": [
+        "IAM-05",
+        "IAM-13"
+      ],
+      "ssrm_ownership": "Shared AP-AIC",
+      "aismm_category": "IAM",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when an AI agent must act on behalf of a human user, requiring explicit OAuth delegation flows, consent capture, and auditable on-behalf-of token chains to prevent privilege escalation."
     },
     {
-      "id": "implementing-patch-management-workflow",
-      "name": "implementing-patch-management-workflow",
+      "id": "implementing-permission-aware-retrieval-for-rag",
+      "name": "implementing-permission-aware-retrieval-for-rag",
       "version": "1.0",
-      "subdomain": "vulnerability-management",
-      "summary": "Patch management is the systematic process of identifying, testing, deploying, and verifying software updates to remediate vulnerabilities across an organization's IT infrastructure. An effective patc"
+      "domain": "DSP",
+      "aicm_controls": [
+        "DSP-07",
+        "IAM-05"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "Data Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when building or auditing a RAG system that must enforce fine-grained document-level permissions, ensuring each user retrieves only documents their identity and role permit them to see."
     },
     {
-      "id": "performing-access-review-and-certification",
-      "name": "performing-access-review-and-certification",
+      "id": "implementing-prompt-and-response-logging",
+      "name": "implementing-prompt-and-response-logging",
       "version": "1.0",
-      "subdomain": "identity-access-management",
-      "summary": "Conduct systematic access reviews and certifications to ensure users have appropriate access rights aligned with their roles. This skill covers review campaign design, reviewer selection, risk-based p"
+      "domain": "LOG",
+      "aicm_controls": [
+        "LOG-03",
+        "LOG-05"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to implement structured, tamper-resistant logging of LLM prompts and responses to support security monitoring, incident investigation, and compliance audits."
     },
     {
-      "id": "implementing-just-in-time-access-provisioning",
-      "name": "implementing-just-in-time-access-provisioning",
+      "id": "investigating-compromised-ai-agent-credentials",
+      "name": "investigating-compromised-ai-agent-credentials",
       "version": "1.0",
-      "subdomain": "identity-access-management",
-      "summary": "Implement Just-In-Time (JIT) access provisioning to eliminate standing privileges by granting temporary, time-bound access only when needed. This skill covers JIT architecture design, approval workflo"
+      "domain": "SEF",
+      "aicm_controls": [
+        "SEF-04",
+        "IAM-08"
+      ],
+      "ssrm_ownership": "Shared AP-AIC",
+      "aismm_category": "Incident Response",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you suspect or have confirmed that credentials used by an AI agent have been stolen or misused, and need to contain the incident, reconstruct the timeline, and restore secure operations."
     },
     {
-      "id": "performing-service-account-audit",
-      "name": "performing-service-account-audit",
+      "id": "isolating-ai-training-clusters",
+      "name": "isolating-ai-training-clusters",
       "version": "1.0",
-      "subdomain": "identity-access-management",
-      "summary": "Audit service accounts across enterprise infrastructure to identify orphaned, over-privileged, and non-compliant accounts. This skill covers discovery of service accounts in Active Directory, cloud pl"
+      "domain": "DCS",
+      "aicm_controls": [
+        "DCS-07",
+        "I&S-04"
+      ],
+      "ssrm_ownership": "CSP-Owned",
+      "aismm_category": "Infrastructure Security & Resilience",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to network-isolate an AI training cluster to prevent training data and model weights from being accessible outside the training environment, and to limit the blast radius of a compromise."
     },
     {
-      "id": "configuring-multi-factor-authentication-with-duo",
-      "name": "configuring-multi-factor-authentication-with-duo",
+      "id": "managing-agent-credential-rotation-and-revocation",
+      "name": "managing-agent-credential-rotation-and-revocation",
       "version": "1.0",
-      "subdomain": "identity-access-management",
-      "summary": "Deploy Cisco Duo multi-factor authentication across enterprise applications, VPN, RDP, and SSH access points. This skill covers Duo integration methods, adaptive authentication policies, device trust"
+      "domain": "IAM",
+      "aicm_controls": [
+        "IAM-08",
+        "CEK-03"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "IAM",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to rotate API keys or secrets used by AI agents on a schedule, or immediately revoke credentials when an agent is compromised, decommissioned, or behaves anomalously."
     },
     {
-      "id": "auditing-aws-s3-bucket-permissions",
-      "name": "auditing-aws-s3-bucket-permissions",
+      "id": "mapping-controls-to-iso-42001",
+      "name": "mapping-controls-to-iso-42001",
       "version": "1.0",
-      "subdomain": "cloud-security",
-      "summary": "Systematically audit AWS S3 bucket permissions to identify publicly accessible buckets, overly permissive ACLs, misconfigured bucket policies, and missing encryption settings using AWS CLI, S3audit, and Prowler to enforce least-privilege data access controls."
+      "domain": "GRC",
+      "aicm_controls": [
+        "GRC-01",
+        "A&A-04"
+      ],
+      "ssrm_ownership": "AIC-Owned",
+      "aismm_category": "Governance",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to map your organization's existing security and AI controls to ISO/IEC 42001 requirements and produce a gap analysis and compliance coverage report."
     },
     {
-      "id": "detecting-aws-cloudtrail-anomalies",
-      "name": "detecting-aws-cloudtrail-anomalies",
+      "id": "monitoring-model-drift-and-degradation",
+      "name": "monitoring-model-drift-and-degradation",
       "version": "1.0",
-      "subdomain": "cloud-security",
-      "summary": "Detect unusual API call patterns in AWS CloudTrail logs using boto3, statistical baselining, and behavioral analysis to identify credential compromise, privilege escalation, and unauthorized resource access."
+      "domain": "MDS",
+      "aicm_controls": [
+        "MDS-07",
+        "LOG-08"
+      ],
+      "ssrm_ownership": "MP-Owned",
+      "aismm_category": "Model Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to detect data drift, concept drift, or performance degradation in a deployed AI model through continuous monitoring, alerting, and automated rollback triggers."
     },
     {
-      "id": "implementing-cloud-security-posture-management",
-      "name": "implementing-cloud-security-posture-management",
+      "id": "protecting-model-artifacts-with-key-management",
+      "name": "protecting-model-artifacts-with-key-management",
       "version": "1.0",
-      "subdomain": "cloud-security",
-      "summary": "Implementing Cloud Security Posture Management (CSPM) to continuously monitor multi-cloud environments for misconfigurations, compliance violations, and security risks using Prowler, ScoutSuite, AWS Security Hub, Azure Defender, and GCP Security Command Center."
+      "domain": "CEK",
+      "aicm_controls": [
+        "CEK-03",
+        "CEK-08"
+      ],
+      "ssrm_ownership": "CSP-Owned",
+      "aismm_category": "Infrastructure Security & Resilience",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to encrypt AI model artifacts at rest using customer-managed keys, implement key rotation, and control access to model weights through a key management service."
     },
     {
-      "id": "detecting-compromised-cloud-credentials",
-      "name": "detecting-compromised-cloud-credentials",
+      "id": "provisioning-non-human-identities-for-ai-agents",
+      "name": "provisioning-non-human-identities-for-ai-agents",
       "version": "1.0",
-      "subdomain": "cloud-security",
-      "summary": "Detecting compromised cloud credentials across AWS, Azure, and GCP by analyzing anomalous API activity, impossible travel patterns, unauthorized resource provisioning, and credential abuse indicators using GuardDuty, Defender for Identity, and SCC Event Threat Detection."
+      "domain": "IAM",
+      "aicm_controls": [
+        "IAM-03",
+        "IAM-12"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "IAM",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to create, scope, and govern dedicated non-human identities for AI agents \u2014 service accounts, workload identities, or machine credentials \u2014 separate from human user accounts."
     },
     {
-      "id": "performing-nist-csf-maturity-assessment",
-      "name": "performing-nist-csf-maturity-assessment",
+      "id": "red-teaming-llm-applications",
+      "name": "red-teaming-llm-applications",
       "version": "1.0",
-      "subdomain": "compliance-governance",
-      "summary": ">- The NIST Cybersecurity Framework (CSF) 2.0, released in February 2024, provides a comprehensive taxonomy for managing cybersecurity risk through six core Functions - Govern, Identify, Protect, Detect, Respond, and Recover. This skill covers conducting a maturity assessment against the CSF using Implementation Tiers to measure organizational cybersecurity posture and create improvement roadmaps."
+      "domain": "TVM",
+      "aicm_controls": [
+        "TVM-03",
+        "MDS-05"
+      ],
+      "ssrm_ownership": "Shared AP-AIC",
+      "aismm_category": "App Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to conduct a structured red-team assessment of an LLM application, systematically probing for jailbreaks, data extraction, harmful output, and safety bypass vulnerabilities."
     },
     {
-      "id": "implementing-iso-27001-information-security-management",
-      "name": "implementing-iso-27001-information-security-management",
+      "id": "scanning-ai-bom-for-vulnerable-components",
+      "name": "scanning-ai-bom-for-vulnerable-components",
       "version": "1.0",
-      "subdomain": "compliance-governance",
-      "summary": "ISO/IEC 27001:2022 is the international standard for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS). This skill covers the complete"
+      "domain": "TVM",
+      "aicm_controls": [
+        "TVM-04",
+        "STA-09"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "AI Supported Development & Supply Chain Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to generate an AI Bill of Materials and scan it for known CVEs, malicious packages, and supply chain risks in ML frameworks, model dependencies, and data pipeline libraries."
     },
     {
-      "id": "implementing-gdpr-data-protection-controls",
-      "name": "implementing-gdpr-data-protection-controls",
+      "id": "scanning-training-and-grounding-data-for-pii",
+      "name": "scanning-training-and-grounding-data-for-pii",
       "version": "1.0",
-      "subdomain": "compliance-governance",
-      "summary": "The General Data Protection Regulation (EU) 2016/679 (GDPR) is the EU's comprehensive data protection law governing the collection, processing, storage, and transfer of personal data. This skill cover"
+      "domain": "DSP",
+      "aicm_controls": [
+        "DSP-10",
+        "DSP-13"
+      ],
+      "ssrm_ownership": "Shared AP-AIC",
+      "aismm_category": "Data Security",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to detect, classify, and remediate personally identifiable information in datasets before they are used to train, fine-tune, or ground an AI model."
     },
     {
-      "id": "analyzing-cyber-kill-chain",
-      "name": "analyzing-cyber-kill-chain",
-      "version": "1.0.0",
-      "subdomain": "threat-intelligence",
-      "summary": "Analyzes intrusion activity against the Lockheed Martin Cyber Kill Chain framework to identify which phases an adversary has completed, where defenses succeeded or failed, and what controls would have interrupted the attack at earlier phases. Use when conducting post-incident analysis, building prevention-focused security controls, or mapping detection gaps to kill chain phases. Activates for requests involving kill chain analysis, intrusion kill chain, attack phase mapping, or Lockheed Martin kill chain framework."
-    },
-    {
-      "id": "implementing-mitre-attack-coverage-mapping",
-      "name": "implementing-mitre-attack-coverage-mapping",
+      "id": "scoping-mcp-tool-authorization-least-privilege",
+      "name": "scoping-mcp-tool-authorization-least-privilege",
       "version": "1.0",
-      "subdomain": "soc-operations",
-      "summary": "Implement MITRE ATT&CK coverage mapping to identify detection gaps, prioritize rule development, and measure SOC detection maturity against adversary techniques."
+      "domain": "IAM",
+      "aicm_controls": [
+        "IAM-09"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "IAM",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to apply least-privilege principles to MCP tool grants, ensuring each AI agent can invoke only the specific tools and parameter ranges required for its assigned task."
     },
     {
-      "id": "building-soc-metrics-and-kpi-tracking",
-      "name": "building-soc-metrics-and-kpi-tracking",
+      "id": "securing-mcp-server-and-tool-boundaries",
+      "name": "securing-mcp-server-and-tool-boundaries",
       "version": "1.0",
-      "subdomain": "soc-operations",
-      "summary": "Builds SOC performance metrics and KPI tracking dashboards measuring Mean Time to Detect (MTTD), Mean Time to Respond (MTTR), alert quality ratios, analyst productivity, and detection coverage using SIEM data. Use when SOC leadership needs operational visibility, continuous improvement tracking, or executive-level reporting on security operations effectiveness."
+      "domain": "AIS",
+      "aicm_controls": [
+        "AIS-10",
+        "IAM-09"
+      ],
+      "ssrm_ownership": "Shared OSP-AP",
+      "aismm_category": "App Security",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to harden a Model Context Protocol server and its exposed tools against unauthorized invocation, privilege escalation, and data exfiltration through agent-initiated tool calls."
+    },
+    {
+      "id": "securing-rag-pipelines-against-data-leakage",
+      "name": "securing-rag-pipelines-against-data-leakage",
+      "version": "1.0",
+      "domain": "DSP",
+      "aicm_controls": [
+        "DSP-07",
+        "DSP-10"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "Data Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to audit, harden, or redesign a Retrieval-Augmented Generation pipeline to prevent sensitive documents from leaking to unauthorized users through LLM responses."
+    },
+    {
+      "id": "validating-training-data-provenance-and-lineage",
+      "name": "validating-training-data-provenance-and-lineage",
+      "version": "1.0",
+      "domain": "DSP",
+      "aicm_controls": [
+        "DSP-03",
+        "STA-07"
+      ],
+      "ssrm_ownership": "MP-Owned",
+      "aismm_category": "Data Security",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to establish or verify the chain of custody for a training dataset \u2014 confirming source, transformation history, and licensing before a model is trained or released."
+    },
+    {
+      "id": "verifying-model-integrity-and-provenance-signing",
+      "name": "verifying-model-integrity-and-provenance-signing",
+      "version": "1.0",
+      "domain": "MDS",
+      "aicm_controls": [
+        "MDS-03",
+        "CCC-04"
+      ],
+      "ssrm_ownership": "MP-Owned",
+      "aismm_category": "Model Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to cryptographically verify that a model artifact has not been tampered with since it was produced, and to sign new model artifacts so downstream consumers can establish provenance."
+    },
+    {
+      "id": "verifying-open-model-supply-chain-integrity",
+      "name": "verifying-open-model-supply-chain-integrity",
+      "version": "1.0",
+      "domain": "STA",
+      "aicm_controls": [
+        "STA-07",
+        "MDS-03"
+      ],
+      "ssrm_ownership": "Shared Across Supply Chain",
+      "aismm_category": "AI Supported Development & Supply Chain Security",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to verify that an open-weight model downloaded from a public registry has not been tampered with, backdoored, or substituted before it is deployed in your environment."
+    },
+    {
+      "id": "versioning-models-and-system-prompts-with-rollback",
+      "name": "versioning-models-and-system-prompts-with-rollback",
+      "version": "1.0",
+      "domain": "CCC",
+      "aicm_controls": [
+        "CCC-03",
+        "CCC-04"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "Organization Management",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to implement version control and rollback capability for AI model artifacts and system prompts, so that a bad deployment can be reverted within minutes without manual intervention."
     }
   ]
 }
