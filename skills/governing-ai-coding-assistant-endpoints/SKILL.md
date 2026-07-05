@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AIC-Owned
 aismm_category: Organization Management
 aismm_target_level: 3
+pillar: security_from_ai
 summary: >-
   Use this skill when you need to govern which AI coding assistant endpoints
   developers may connect to from managed devices, preventing data leakage to

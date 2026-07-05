@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AP-Owned
 aismm_category: App Security
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to quantitatively score a deployed or
   pre-production LLM system's resistance to jailbreak attempts before

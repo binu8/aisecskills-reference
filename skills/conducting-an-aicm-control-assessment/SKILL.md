@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AIC-Owned
 aismm_category: Privacy, Compliance and Audit
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to conduct a structured assessment of your
   organization's AI controls against the CSA AICM control framework,

@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: Shared AP-AIC
 aismm_category: Data Security
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to detect, classify, and remediate personally
   identifiable information in datasets before they are used to train,

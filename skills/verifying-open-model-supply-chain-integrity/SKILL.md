@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: Shared Across Supply Chain
 aismm_category: AI Supported Development & Supply Chain Security
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to verify that an open-weight model downloaded
   from a public registry has not been tampered with, backdoored, or substituted

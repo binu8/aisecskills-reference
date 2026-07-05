@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AP-Owned
 aismm_category: Data Security
 aismm_target_level: 4
+pillar: security_for_ai
 summary: >-
   Use this skill when building or auditing a RAG system that must enforce
   fine-grained document-level permissions, ensuring each user retrieves only

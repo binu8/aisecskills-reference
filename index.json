@@ -1,6 +1,6 @@
 {
-  "schema_version": "2.0",
-  "skill_count": 40,
+  "schema_version": "2.1",
+  "skill_count": 55,
   "license": "Apache-2.0",
   "note": "aicm_controls and ssrm_ownership are proposed mappings \u2014 verify against AICM v1.0.3 before formal self-assessments.",
   "skills": [
@@ -9,6 +9,7 @@
       "name": "applying-zero-trust-to-ai-workloads",
       "version": "1.0",
       "domain": "I&S",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "I&S-04",
         "IAM-03"
@@ -23,6 +24,7 @@
       "name": "assessing-jailbreak-resistance-pre-deployment",
       "version": "1.0",
       "domain": "TVM",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "TVM-03",
         "AIS-09"
@@ -37,6 +39,7 @@
       "name": "assessing-third-party-model-and-provider-risk",
       "version": "1.0",
       "domain": "STA",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "STA-03",
         "GRC-08"
@@ -47,10 +50,26 @@
       "summary": "Use this skill when you need to evaluate the security, privacy, and compliance risks of adopting a third-party AI model provider, API service, or pre-trained model before onboarding."
     },
     {
+      "id": "bounding-agent-autonomy-and-tool-scopes-least-privilege",
+      "name": "bounding-agent-autonomy-and-tool-scopes-least-privilege",
+      "version": "1.0",
+      "domain": "IAM",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "IAM-09",
+        "AIS-10"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "IAM",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when an AI agent can invoke state-changing tools and you need to bound its blast radius with least-privilege tool scopes, rate limits, and budgets enforced by a fail-closed broker."
+    },
+    {
       "id": "building-an-ai-incident-response-playbook",
       "name": "building-an-ai-incident-response-playbook",
       "version": "1.0",
       "domain": "SEF",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "SEF-03",
         "SEF-06"
@@ -65,6 +84,7 @@
       "name": "building-an-ai-risk-register",
       "version": "1.0",
       "domain": "GRC",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "GRC-02",
         "GRC-03"
@@ -79,6 +99,7 @@
       "name": "capturing-agent-action-and-delegation-telemetry",
       "version": "1.0",
       "domain": "LOG",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "LOG-05",
         "LOG-13"
@@ -93,6 +114,7 @@
       "name": "classifying-ai-systems-under-eu-ai-act",
       "version": "1.0",
       "domain": "GRC",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "GRC-05",
         "A&A-04"
@@ -107,6 +129,7 @@
       "name": "completing-the-ai-caiq-self-assessment",
       "version": "1.0",
       "domain": "A&A",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "A&A-01",
         "A&A-06"
@@ -121,6 +144,7 @@
       "name": "conducting-adversarial-robustness-testing",
       "version": "1.0",
       "domain": "MDS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "MDS-05"
       ],
@@ -134,6 +158,7 @@
       "name": "conducting-an-aicm-control-assessment",
       "version": "1.0",
       "domain": "A&A",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "A&A-02",
         "A&A-05"
@@ -148,6 +173,7 @@
       "name": "defending-against-prompt-injection",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "AIS-08"
       ],
@@ -161,6 +187,7 @@
       "name": "deploying-llm-output-guardrails",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "AIS-09"
       ],
@@ -174,6 +201,7 @@
       "name": "designing-ai-service-failover-and-resilience",
       "version": "1.0",
       "domain": "BCR",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "BCR-03",
         "BCR-08"
@@ -184,10 +212,187 @@
       "summary": "Use this skill when you need to design failover and resilience patterns for AI services \u2014 including LLM API fallback, model endpoint redundancy, and graceful degradation under provider outages."
     },
     {
+      "id": "detect-mcp-adversarial-input-corpus",
+      "name": "detect-mcp-adversarial-input-corpus",
+      "version": "1.0",
+      "domain": "AIS",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "AIS-08"
+      ],
+      "ssrm_ownership": "Shared OSP-AP",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need runtime detection of adversarial prompts / jailbreak attempts matching a curated fingerprint catalog, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+    },
+    {
+      "id": "detect-mcp-model-artifact-tampering",
+      "name": "detect-mcp-model-artifact-tampering",
+      "version": "1.0",
+      "domain": "MDS",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "MDS-05",
+        "STA-06"
+      ],
+      "ssrm_ownership": "Shared OSP-AP",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need runtime detection of ML supply-chain compromise where an MCP server swaps a model artifact (weights, adapter, tokenizer) mid-session, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+    },
+    {
+      "id": "detect-mcp-model-token-flood",
+      "name": "detect-mcp-model-token-flood",
+      "version": "1.0",
+      "domain": "MDS",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "MDS-07",
+        "AIS-07"
+      ],
+      "ssrm_ownership": "Shared OSP-AP",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need runtime detection of unbounded prompt-token consumption against a model endpoint over MCP (OWASP LLM10), running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+    },
+    {
+      "id": "detect-mcp-plugin-supply-chain",
+      "name": "detect-mcp-plugin-supply-chain",
+      "version": "1.0",
+      "domain": "STA",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "STA-06",
+        "AIS-10"
+      ],
+      "ssrm_ownership": "Shared OSP-AP",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need runtime detection of MCP plugin/tool whose inputSchema references a hostname outside an allowlist (supply-chain risk), running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+    },
+    {
+      "id": "detect-mcp-shadow-tool-injection",
+      "name": "detect-mcp-shadow-tool-injection",
+      "version": "1.0",
+      "domain": "AIS",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "AIS-10",
+        "STA-06"
+      ],
+      "ssrm_ownership": "Shared OSP-AP",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need runtime detection of MCP tool poisoning where a tool's description or inputSchema is mutated mid-session away from a server-registered baseline, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+    },
+    {
+      "id": "detect-mcp-tool-drift",
+      "name": "detect-mcp-tool-drift",
+      "version": "1.0",
+      "domain": "AIS",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "AIS-10",
+        "STA-06"
+      ],
+      "ssrm_ownership": "Shared OSP-AP",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need runtime detection of MCP tool-poisoning / rug-pull where a tool's schema changes within a session after the agent has already trusted it, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+    },
+    {
+      "id": "detect-mcp-unbounded-tool-output",
+      "name": "detect-mcp-unbounded-tool-output",
+      "version": "1.0",
+      "domain": "AIS",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "AIS-07"
+      ],
+      "ssrm_ownership": "Shared OSP-AP",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need runtime detection of unbounded tool-output consumption (OWASP LLM10) where a tool systematically breaches output ceilings, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+    },
+    {
+      "id": "detect-prompt-injection-mcp-proxy",
+      "name": "detect-prompt-injection-mcp-proxy",
+      "version": "1.0",
+      "domain": "AIS",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "AIS-08"
+      ],
+      "ssrm_ownership": "Shared OSP-AP",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need runtime detection of prompt-injection and instruction-smuggling language embedded in MCP tool descriptions, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+    },
+    {
+      "id": "detect-system-prompt-extraction",
+      "name": "detect-system-prompt-extraction",
+      "version": "1.0",
+      "domain": "AIS",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "AIS-08"
+      ],
+      "ssrm_ownership": "Shared OSP-AP",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need runtime detection of MCP tool-call responses that leak system-prompt or hidden-instruction material, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+    },
+    {
+      "id": "detect-tool-output-exfiltration-instructions",
+      "name": "detect-tool-output-exfiltration-instructions",
+      "version": "1.0",
+      "domain": "DSP",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "DSP-06",
+        "AIS-08"
+      ],
+      "ssrm_ownership": "Shared OSP-AP",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need runtime detection of MCP tool-call responses instructing the agent to exfiltrate conversation history, prompts, files, or secrets, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+    },
+    {
+      "id": "detecting-cascading-and-feedback-loop-agent-behavior",
+      "name": "detecting-cascading-and-feedback-loop-agent-behavior",
+      "version": "1.0",
+      "domain": "LOG",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "LOG-03",
+        "LOG-13"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when agents can chain actions or read from and write to a shared source, and you need to detect cascades and feedback loops behind a circuit-breaker."
+    },
+    {
+      "id": "detecting-deepfake-audio-in-vishing-attacks",
+      "name": "detecting-deepfake-audio-in-vishing-attacks",
+      "version": "1.0",
+      "domain": "TVM",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "TVM-03",
+        "SEF-05"
+      ],
+      "ssrm_ownership": "AIC-Owned",
+      "aismm_category": "Incident Response",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to determine whether a recorded phone call contains AI-generated deepfake speech, extracting spectral features to classify the audio and produce a forensic report."
+    },
+    {
       "id": "detecting-prompt-injection-and-jailbreak-attempts",
       "name": "detecting-prompt-injection-and-jailbreak-attempts",
       "version": "1.0",
       "domain": "LOG",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "LOG-08",
         "AIS-08"
@@ -202,6 +407,7 @@
       "name": "enabling-model-and-data-portability-and-export",
       "version": "1.0",
       "domain": "IPY",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "IPY-02",
         "IPY-04"
@@ -216,6 +422,7 @@
       "name": "establishing-ai-acceptable-use-and-developer-training",
       "version": "1.0",
       "domain": "HRS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "HRS-04",
         "HRS-11"
@@ -230,6 +437,7 @@
       "name": "evaluating-model-safety-bias-and-harm",
       "version": "1.0",
       "domain": "MDS",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "MDS-09"
       ],
@@ -243,6 +451,7 @@
       "name": "generating-an-ai-bill-of-materials",
       "version": "1.0",
       "domain": "STA",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "STA-07",
         "STA-09"
@@ -257,6 +466,7 @@
       "name": "governing-ai-coding-assistant-endpoints",
       "version": "1.0",
       "domain": "UEM",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "UEM-03",
         "UEM-09"
@@ -271,6 +481,7 @@
       "name": "hardening-agent-orchestration-against-drift",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "AIS-08",
         "AIS-09"
@@ -281,10 +492,41 @@
       "summary": "Use this skill when you need to prevent an AI agent orchestration system from drifting outside its intended scope through goal hijacking, runaway loops, or unauthorized sub-agent delegation."
     },
     {
+      "id": "implementing-content-safety-output-filtering",
+      "name": "implementing-content-safety-output-filtering",
+      "version": "1.0",
+      "domain": "AIS",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "AIS-08",
+        "MDS-07"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "App Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when a generative AI application exposes free-form output to end users and you need to filter that output through a content-safety classifier before it reaches them."
+    },
+    {
+      "id": "implementing-kill-switch-and-rollback-for-autonomous-agents",
+      "name": "implementing-kill-switch-and-rollback-for-autonomous-agents",
+      "version": "1.0",
+      "domain": "SEF",
+      "pillar": "security_from_ai",
+      "aicm_controls": [
+        "SEF-03",
+        "SEF-06"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "Incident Response",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when an autonomous AI agent holds state-changing permissions in production and you need an emergency kill switch and per-action rollback the SOC can invoke within seconds."
+    },
+    {
       "id": "implementing-on-behalf-of-delegation-and-consent",
       "name": "implementing-on-behalf-of-delegation-and-consent",
       "version": "1.0",
       "domain": "IAM",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "IAM-05",
         "IAM-13"
@@ -299,6 +541,7 @@
       "name": "implementing-permission-aware-retrieval-for-rag",
       "version": "1.0",
       "domain": "DSP",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "DSP-07",
         "IAM-05"
@@ -313,6 +556,7 @@
       "name": "implementing-prompt-and-response-logging",
       "version": "1.0",
       "domain": "LOG",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "LOG-03",
         "LOG-05"
@@ -327,6 +571,7 @@
       "name": "investigating-compromised-ai-agent-credentials",
       "version": "1.0",
       "domain": "SEF",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "SEF-04",
         "IAM-08"
@@ -341,6 +586,7 @@
       "name": "isolating-ai-training-clusters",
       "version": "1.0",
       "domain": "DCS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "DCS-07",
         "I&S-04"
@@ -355,6 +601,7 @@
       "name": "managing-agent-credential-rotation-and-revocation",
       "version": "1.0",
       "domain": "IAM",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "IAM-08",
         "CEK-03"
@@ -369,6 +616,7 @@
       "name": "mapping-controls-to-iso-42001",
       "version": "1.0",
       "domain": "GRC",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "GRC-01",
         "A&A-04"
@@ -383,6 +631,7 @@
       "name": "monitoring-model-drift-and-degradation",
       "version": "1.0",
       "domain": "MDS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "MDS-07",
         "LOG-08"
@@ -397,6 +646,7 @@
       "name": "protecting-model-artifacts-with-key-management",
       "version": "1.0",
       "domain": "CEK",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "CEK-03",
         "CEK-08"
@@ -411,6 +661,7 @@
       "name": "provisioning-non-human-identities-for-ai-agents",
       "version": "1.0",
       "domain": "IAM",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "IAM-03",
         "IAM-12"
@@ -425,6 +676,7 @@
       "name": "red-teaming-llm-applications",
       "version": "1.0",
       "domain": "TVM",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "TVM-03",
         "MDS-05"
@@ -439,6 +691,7 @@
       "name": "scanning-ai-bom-for-vulnerable-components",
       "version": "1.0",
       "domain": "TVM",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "TVM-04",
         "STA-09"
@@ -453,6 +706,7 @@
       "name": "scanning-training-and-grounding-data-for-pii",
       "version": "1.0",
       "domain": "DSP",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "DSP-10",
         "DSP-13"
@@ -467,6 +721,7 @@
       "name": "scoping-mcp-tool-authorization-least-privilege",
       "version": "1.0",
       "domain": "IAM",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "IAM-09"
       ],
@@ -480,6 +735,7 @@
       "name": "securing-mcp-server-and-tool-boundaries",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "AIS-10",
         "IAM-09"
@@ -494,6 +750,7 @@
       "name": "securing-rag-pipelines-against-data-leakage",
       "version": "1.0",
       "domain": "DSP",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "DSP-07",
         "DSP-10"
@@ -508,6 +765,7 @@
       "name": "validating-training-data-provenance-and-lineage",
       "version": "1.0",
       "domain": "DSP",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "DSP-03",
         "STA-07"
@@ -522,6 +780,7 @@
       "name": "verifying-model-integrity-and-provenance-signing",
       "version": "1.0",
       "domain": "MDS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "MDS-03",
         "CCC-04"
@@ -536,6 +795,7 @@
       "name": "verifying-open-model-supply-chain-integrity",
       "version": "1.0",
       "domain": "STA",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "STA-07",
         "MDS-03"
@@ -550,6 +810,7 @@
       "name": "versioning-models-and-system-prompts-with-rollback",
       "version": "1.0",
       "domain": "CCC",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "CCC-03",
         "CCC-04"

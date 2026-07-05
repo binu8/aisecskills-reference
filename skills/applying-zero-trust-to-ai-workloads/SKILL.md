@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: Shared Across Supply Chain
 aismm_category: Infrastructure Security & Resilience
 aismm_target_level: 4
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to apply zero-trust principles to AI workload
   networking — ensuring no implicit trust between AI services, agents, and

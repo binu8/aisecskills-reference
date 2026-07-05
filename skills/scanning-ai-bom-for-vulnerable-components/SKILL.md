@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AP-Owned
 aismm_category: AI Supported Development & Supply Chain Security
 aismm_target_level: 4
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to generate an AI Bill of Materials and
   scan it for known CVEs, malicious packages, and supply chain risks in

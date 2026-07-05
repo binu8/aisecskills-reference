@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AIC-Owned
 aismm_category: Privacy, Compliance and Audit
 aismm_target_level: 3
+pillar: security_from_ai
 summary: >-
   Use this skill when you need to classify an AI system under the EU AI
   Act risk tiers — unacceptable, high-risk, limited, or minimal — and

@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: Shared AP-AIC
 aismm_category: App Security
 aismm_target_level: 4
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to conduct a structured red-team assessment
   of an LLM application, systematically probing for jailbreaks, data

@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AP-Owned
 aismm_category: Security Monitoring
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to implement structured, tamper-resistant
   logging of LLM prompts and responses to support security monitoring,

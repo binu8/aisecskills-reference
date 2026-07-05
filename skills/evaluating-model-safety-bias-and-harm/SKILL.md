@@ -11,6 +11,7 @@ aicm_controls:
 ssrm_ownership: MP-Owned
 aismm_category: Model Security
 aismm_target_level: 3
+pillar: security_from_ai
 summary: >-
   Use this skill when you need to systematically evaluate an AI model for
   safety failures, demographic bias, and harmful output potential before

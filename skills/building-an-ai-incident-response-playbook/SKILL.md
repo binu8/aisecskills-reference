@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AIC-Owned
 aismm_category: Incident Response
 aismm_target_level: 3
+pillar: security_from_ai
 summary: >-
   Use this skill when you need to create or update an incident response
   playbook that covers AI-specific incident types — model compromise,

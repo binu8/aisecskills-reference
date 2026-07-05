@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AIC-Owned
 aismm_category: Privacy, Compliance and Audit
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to complete the CSA AI Consensus Assessments
   Initiative Questionnaire (AI-CAIQ) for your organization, producing a

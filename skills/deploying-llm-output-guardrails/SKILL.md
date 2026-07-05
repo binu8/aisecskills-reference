@@ -11,6 +11,7 @@ aicm_controls:
 ssrm_ownership: AP-Owned
 aismm_category: App Security
 aismm_target_level: 4
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to intercept, classify, and block or rewrite
   unsafe, off-topic, or policy-violating LLM outputs before they reach end

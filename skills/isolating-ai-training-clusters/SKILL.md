@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: CSP-Owned
 aismm_category: Infrastructure Security & Resilience
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to network-isolate an AI training cluster
   to prevent training data and model weights from being accessible outside

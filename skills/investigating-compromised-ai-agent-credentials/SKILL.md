@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: Shared AP-AIC
 aismm_category: Incident Response
 aismm_target_level: 4
+pillar: security_from_ai
 summary: >-
   Use this skill when you suspect or have confirmed that credentials used
   by an AI agent have been stolen or misused, and need to contain the
