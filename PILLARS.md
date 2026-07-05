@@ -5,7 +5,7 @@ Every skill in this library is grouped under one of three pillars. The `pillar` 
 | Pillar | Focus | Skills |
 |---|---|---|
 | **Security for AI** | Protecting AI systems throughout their lifecycle | 35 |
-| **AI for Security** | Deploying AI as a security capability | 0 |
+| **AI for Security** | Deploying AI as a security capability | 1 |
 | **Security from AI** | Managing AI-specific risks and harms | 20 |
 
 ## Security for AI
@@ -52,7 +52,9 @@ Every skill in this library is grouped under one of three pillars. The `pillar` 
 
 *Deploying AI as a security capability.*
 
-_No skills yet. This pillar is the current authoring gap: using AI itself as a security capability (AI-assisted detection, triage, and response) is thinly covered by existing standards and is the next area to build._
+This pillar was the current authoring gap: using AI itself as a security capability (AI-assisted detection, triage, and response) is thinly covered by existing standards. It remains the priority area to build.
+
+- **`fitting-ai-triage-to-known-noise-sources`** (LOG) — Use this skill when an AI-assisted alert triage system is flagging too many known-benign patterns as incidents, and you need to fit its decision policy to your organization's specific noise sources — vulnerability scanners, backup service accounts, VPN egress ranges, approved tooling — without suppressing genuine true positives.
 
 ## Security from AI
 
