@@ -39,7 +39,7 @@ Skills are licensed **Apache 2.0**.
 
 ## What this is NOT
 
-- **Not the full library.** The full working library covers <!-- TODO(BC): source count from web/lib/site-metrics.ts TOTAL_SKILLS --> skills with framework crosswalks, the MECE AICM partition, AISMM scoring, and a governance layer. This repository is a representative sample.
+- **Not the full library.** The full working library is substantially larger, with framework crosswalks, the MECE AICM partition, AISMM scoring, and a governance layer. This repository is a representative sample.
 - **Not a product.** There is no subscription, agent runtime, or tooling here — only structured knowledge in a portable plain-text format.
 - **Not a certification.** Nothing here constitutes compliance advice, regulatory certification, or a completed audit. STAR for AI Level 1 is a self-assessment registry listing.
 
