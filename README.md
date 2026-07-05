@@ -115,9 +115,7 @@ Skills in this library cross-reference the following standards where applicable:
 
 ## Provenance
 
-This repository previously contained skills derived from an open Apache-2.0 upstream library ([Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills)). The v2 skills in this release are originally authored for the AICM/AI-CAIQ/AISMM framework. See [NOTICE](NOTICE) for full attribution.
-
-> **Note for BC/counsel:** The v2 skills are original content and no longer derived from the upstream base. The upstream attribution in NOTICE and LICENSE describes the v1 lineage and may need updating for v2. CSA instrument attribution (AICM, AI-CAIQ, AISMM) and commercial licensing terms are a counsel question — see the TODO in the NOTICE file.
+This repository previously contained skills derived from an open Apache-2.0 upstream library ([Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills)). The v2 skills in this release are originally authored for the AICM/AI-CAIQ/AISMM framework, and no longer derived from that upstream base. See [NOTICE](NOTICE) for full attribution, including the vendored `vendor/msaad00-mcp-detection/` skills.
 
 ---
 
