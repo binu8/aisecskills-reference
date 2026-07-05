@@ -8,4 +8,15 @@ Apache License 2.0. Original portions Copyright (c) the respective authors.
 Modifications, curation, framework tagging, and additional materials
 Copyright (c) 2026 ai · security · skills.
 
+This repository also vendors, under vendor/msaad00-mcp-detection/, MCP threat-detection
+skills and their shared runtime derived from the cloud-ai-security-skills project
+(https://github.com/msaad00/cloud-ai-security-skills), commit
+c5e5d03208719c298bb07e72d9ce32cf2b0e31e5, licensed under the Apache License 2.0.
+Original portions Copyright (c) the respective authors. The vendored copy retains the
+upstream source, tests, and golden fixtures for the ten MCP/prompt-injection detection
+skills and the ingest-mcp-proxy-ocsf skill; unrelated skills, fixtures, and integration
+tests were removed. A copy of the upstream license is at
+vendor/msaad00-mcp-detection/LICENSE, and provenance is documented in
+vendor/msaad00-mcp-detection/README.md.
+
 A copy of the Apache License 2.0 is included in this distribution as LICENSE.
