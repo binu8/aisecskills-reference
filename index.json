@@ -1,6 +1,6 @@
 {
   "schema_version": "2.1",
-  "skill_count": 55,
+  "skill_count": 56,
   "license": "Apache-2.0",
   "note": "aicm_controls and ssrm_ownership are proposed mappings \u2014 verify against AICM v1.0.3 before formal self-assessments.",
   "skills": [
@@ -819,6 +819,21 @@
       "aismm_category": "Organization Management",
       "aismm_target_level": 3,
       "summary": "Use this skill when you need to implement version control and rollback capability for AI model artifacts and system prompts, so that a bad deployment can be reverted within minutes without manual intervention."
+    },
+    {
+      "id": "fitting-ai-triage-to-known-noise-sources",
+      "name": "fitting-ai-triage-to-known-noise-sources",
+      "version": "1.0",
+      "domain": "LOG",
+      "pillar": "ai_for_security",
+      "aicm_controls": [
+        "LOG-05",
+        "GRC-04"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when an AI-assisted alert triage system is flagging too many known-benign patterns as incidents, and you need to fit its decision policy to your organization's specific noise sources \u2014 vulnerability scanners, backup service accounts, VPN egress ranges, approved tooling \u2014 without suppressing genuine true positives."
     }
   ]
 }
