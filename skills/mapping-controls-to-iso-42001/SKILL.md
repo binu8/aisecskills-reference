@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AIC-Owned
 aismm_category: Governance
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to map your organization's existing security
   and AI controls to ISO/IEC 42001 requirements and produce a gap analysis

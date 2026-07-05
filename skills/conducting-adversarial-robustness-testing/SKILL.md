@@ -11,6 +11,7 @@ aicm_controls:
 ssrm_ownership: MP-Owned
 aismm_category: Model Security
 aismm_target_level: 4
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to systematically measure how an AI model
   responds to adversarial inputs — perturbations, out-of-distribution samples,

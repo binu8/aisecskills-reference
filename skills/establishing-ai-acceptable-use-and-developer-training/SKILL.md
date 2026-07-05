@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AIC-Owned
 aismm_category: Governance
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to create an AI acceptable use policy,
   security training curriculum, and attestation process for developers

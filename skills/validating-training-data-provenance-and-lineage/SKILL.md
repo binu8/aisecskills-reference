@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: MP-Owned
 aismm_category: Data Security
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to establish or verify the chain of custody
   for a training dataset — confirming source, transformation history, and

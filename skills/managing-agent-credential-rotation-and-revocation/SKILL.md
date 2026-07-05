@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AP-Owned
 aismm_category: IAM
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to rotate API keys or secrets used by AI
   agents on a schedule, or immediately revoke credentials when an agent

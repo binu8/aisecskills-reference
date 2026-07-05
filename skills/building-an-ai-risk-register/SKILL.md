@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AIC-Owned
 aismm_category: Risk & Provider Assessment & Management
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to create or maintain a structured AI risk
   register that captures, scores, and tracks mitigations for identified

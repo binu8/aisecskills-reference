@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: Shared AP-AIC
 aismm_category: IAM
 aismm_target_level: 4
+pillar: security_for_ai
 summary: >-
   Use this skill when an AI agent must act on behalf of a human user,
   requiring explicit OAuth delegation flows, consent capture, and

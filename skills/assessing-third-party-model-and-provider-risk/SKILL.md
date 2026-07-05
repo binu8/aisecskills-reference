@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AIC-Owned
 aismm_category: Risk & Provider Assessment & Management
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to evaluate the security, privacy, and
   compliance risks of adopting a third-party AI model provider, API

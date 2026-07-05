@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: Shared OSP-AP
 aismm_category: Security Monitoring
 aismm_target_level: 4
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to instrument an AI agent system to capture
   every tool call, sub-agent delegation, and state transition as structured

@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: Shared MP-OSP
 aismm_category: Data Security
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to implement model and training data export
   capabilities so that an organization can migrate away from a provider,

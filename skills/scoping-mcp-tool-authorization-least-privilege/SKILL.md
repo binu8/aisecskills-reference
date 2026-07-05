@@ -11,6 +11,7 @@ aicm_controls:
 ssrm_ownership: AP-Owned
 aismm_category: IAM
 aismm_target_level: 4
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to apply least-privilege principles to
   MCP tool grants, ensuring each AI agent can invoke only the specific

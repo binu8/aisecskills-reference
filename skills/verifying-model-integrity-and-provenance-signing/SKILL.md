@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: MP-Owned
 aismm_category: Model Security
 aismm_target_level: 4
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to cryptographically verify that a model
   artifact has not been tampered with since it was produced, and to sign

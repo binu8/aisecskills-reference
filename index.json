@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "2.1",
   "skill_count": 55,
   "license": "Apache-2.0",
   "note": "aicm_controls and ssrm_ownership are proposed mappings \u2014 verify against AICM v1.0.3 before formal self-assessments.",
@@ -9,6 +9,7 @@
       "name": "applying-zero-trust-to-ai-workloads",
       "version": "1.0",
       "domain": "I&S",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "I&S-04",
         "IAM-03"
@@ -23,6 +24,7 @@
       "name": "assessing-jailbreak-resistance-pre-deployment",
       "version": "1.0",
       "domain": "TVM",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "TVM-03",
         "AIS-09"
@@ -37,6 +39,7 @@
       "name": "assessing-third-party-model-and-provider-risk",
       "version": "1.0",
       "domain": "STA",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "STA-03",
         "GRC-08"
@@ -51,6 +54,7 @@
       "name": "bounding-agent-autonomy-and-tool-scopes-least-privilege",
       "version": "1.0",
       "domain": "IAM",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "IAM-09",
         "AIS-10"
@@ -65,6 +69,7 @@
       "name": "building-an-ai-incident-response-playbook",
       "version": "1.0",
       "domain": "SEF",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "SEF-03",
         "SEF-06"
@@ -79,6 +84,7 @@
       "name": "building-an-ai-risk-register",
       "version": "1.0",
       "domain": "GRC",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "GRC-02",
         "GRC-03"
@@ -93,6 +99,7 @@
       "name": "capturing-agent-action-and-delegation-telemetry",
       "version": "1.0",
       "domain": "LOG",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "LOG-05",
         "LOG-13"
@@ -107,6 +114,7 @@
       "name": "classifying-ai-systems-under-eu-ai-act",
       "version": "1.0",
       "domain": "GRC",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "GRC-05",
         "A&A-04"
@@ -121,6 +129,7 @@
       "name": "completing-the-ai-caiq-self-assessment",
       "version": "1.0",
       "domain": "A&A",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "A&A-01",
         "A&A-06"
@@ -135,6 +144,7 @@
       "name": "conducting-adversarial-robustness-testing",
       "version": "1.0",
       "domain": "MDS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "MDS-05"
       ],
@@ -148,6 +158,7 @@
       "name": "conducting-an-aicm-control-assessment",
       "version": "1.0",
       "domain": "A&A",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "A&A-02",
         "A&A-05"
@@ -162,6 +173,7 @@
       "name": "defending-against-prompt-injection",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "AIS-08"
       ],
@@ -175,6 +187,7 @@
       "name": "deploying-llm-output-guardrails",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "AIS-09"
       ],
@@ -188,6 +201,7 @@
       "name": "designing-ai-service-failover-and-resilience",
       "version": "1.0",
       "domain": "BCR",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "BCR-03",
         "BCR-08"
@@ -202,6 +216,7 @@
       "name": "detect-mcp-adversarial-input-corpus",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "AIS-08"
       ],
@@ -215,6 +230,7 @@
       "name": "detect-mcp-model-artifact-tampering",
       "version": "1.0",
       "domain": "MDS",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "MDS-05",
         "STA-06"
@@ -229,6 +245,7 @@
       "name": "detect-mcp-model-token-flood",
       "version": "1.0",
       "domain": "MDS",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "MDS-07",
         "AIS-07"
@@ -243,6 +260,7 @@
       "name": "detect-mcp-plugin-supply-chain",
       "version": "1.0",
       "domain": "STA",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "STA-06",
         "AIS-10"
@@ -257,6 +275,7 @@
       "name": "detect-mcp-shadow-tool-injection",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "AIS-10",
         "STA-06"
@@ -271,6 +290,7 @@
       "name": "detect-mcp-tool-drift",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "AIS-10",
         "STA-06"
@@ -285,6 +305,7 @@
       "name": "detect-mcp-unbounded-tool-output",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "AIS-07"
       ],
@@ -298,6 +319,7 @@
       "name": "detect-prompt-injection-mcp-proxy",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "AIS-08"
       ],
@@ -311,6 +333,7 @@
       "name": "detect-system-prompt-extraction",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "AIS-08"
       ],
@@ -324,6 +347,7 @@
       "name": "detect-tool-output-exfiltration-instructions",
       "version": "1.0",
       "domain": "DSP",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "DSP-06",
         "AIS-08"
@@ -338,6 +362,7 @@
       "name": "detecting-cascading-and-feedback-loop-agent-behavior",
       "version": "1.0",
       "domain": "LOG",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "LOG-03",
         "LOG-13"
@@ -352,6 +377,7 @@
       "name": "detecting-deepfake-audio-in-vishing-attacks",
       "version": "1.0",
       "domain": "TVM",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "TVM-03",
         "SEF-05"
@@ -366,6 +392,7 @@
       "name": "detecting-prompt-injection-and-jailbreak-attempts",
       "version": "1.0",
       "domain": "LOG",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "LOG-08",
         "AIS-08"
@@ -380,6 +407,7 @@
       "name": "enabling-model-and-data-portability-and-export",
       "version": "1.0",
       "domain": "IPY",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "IPY-02",
         "IPY-04"
@@ -394,6 +422,7 @@
       "name": "establishing-ai-acceptable-use-and-developer-training",
       "version": "1.0",
       "domain": "HRS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "HRS-04",
         "HRS-11"
@@ -408,6 +437,7 @@
       "name": "evaluating-model-safety-bias-and-harm",
       "version": "1.0",
       "domain": "MDS",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "MDS-09"
       ],
@@ -421,6 +451,7 @@
       "name": "generating-an-ai-bill-of-materials",
       "version": "1.0",
       "domain": "STA",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "STA-07",
         "STA-09"
@@ -435,6 +466,7 @@
       "name": "governing-ai-coding-assistant-endpoints",
       "version": "1.0",
       "domain": "UEM",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "UEM-03",
         "UEM-09"
@@ -449,6 +481,7 @@
       "name": "hardening-agent-orchestration-against-drift",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "AIS-08",
         "AIS-09"
@@ -463,6 +496,7 @@
       "name": "implementing-content-safety-output-filtering",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "AIS-08",
         "MDS-07"
@@ -477,6 +511,7 @@
       "name": "implementing-kill-switch-and-rollback-for-autonomous-agents",
       "version": "1.0",
       "domain": "SEF",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "SEF-03",
         "SEF-06"
@@ -491,6 +526,7 @@
       "name": "implementing-on-behalf-of-delegation-and-consent",
       "version": "1.0",
       "domain": "IAM",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "IAM-05",
         "IAM-13"
@@ -505,6 +541,7 @@
       "name": "implementing-permission-aware-retrieval-for-rag",
       "version": "1.0",
       "domain": "DSP",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "DSP-07",
         "IAM-05"
@@ -519,6 +556,7 @@
       "name": "implementing-prompt-and-response-logging",
       "version": "1.0",
       "domain": "LOG",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "LOG-03",
         "LOG-05"
@@ -533,6 +571,7 @@
       "name": "investigating-compromised-ai-agent-credentials",
       "version": "1.0",
       "domain": "SEF",
+      "pillar": "security_from_ai",
       "aicm_controls": [
         "SEF-04",
         "IAM-08"
@@ -547,6 +586,7 @@
       "name": "isolating-ai-training-clusters",
       "version": "1.0",
       "domain": "DCS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "DCS-07",
         "I&S-04"
@@ -561,6 +601,7 @@
       "name": "managing-agent-credential-rotation-and-revocation",
       "version": "1.0",
       "domain": "IAM",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "IAM-08",
         "CEK-03"
@@ -575,6 +616,7 @@
       "name": "mapping-controls-to-iso-42001",
       "version": "1.0",
       "domain": "GRC",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "GRC-01",
         "A&A-04"
@@ -589,6 +631,7 @@
       "name": "monitoring-model-drift-and-degradation",
       "version": "1.0",
       "domain": "MDS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "MDS-07",
         "LOG-08"
@@ -603,6 +646,7 @@
       "name": "protecting-model-artifacts-with-key-management",
       "version": "1.0",
       "domain": "CEK",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "CEK-03",
         "CEK-08"
@@ -617,6 +661,7 @@
       "name": "provisioning-non-human-identities-for-ai-agents",
       "version": "1.0",
       "domain": "IAM",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "IAM-03",
         "IAM-12"
@@ -631,6 +676,7 @@
       "name": "red-teaming-llm-applications",
       "version": "1.0",
       "domain": "TVM",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "TVM-03",
         "MDS-05"
@@ -645,6 +691,7 @@
       "name": "scanning-ai-bom-for-vulnerable-components",
       "version": "1.0",
       "domain": "TVM",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "TVM-04",
         "STA-09"
@@ -659,6 +706,7 @@
       "name": "scanning-training-and-grounding-data-for-pii",
       "version": "1.0",
       "domain": "DSP",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "DSP-10",
         "DSP-13"
@@ -673,6 +721,7 @@
       "name": "scoping-mcp-tool-authorization-least-privilege",
       "version": "1.0",
       "domain": "IAM",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "IAM-09"
       ],
@@ -686,6 +735,7 @@
       "name": "securing-mcp-server-and-tool-boundaries",
       "version": "1.0",
       "domain": "AIS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "AIS-10",
         "IAM-09"
@@ -700,6 +750,7 @@
       "name": "securing-rag-pipelines-against-data-leakage",
       "version": "1.0",
       "domain": "DSP",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "DSP-07",
         "DSP-10"
@@ -714,6 +765,7 @@
       "name": "validating-training-data-provenance-and-lineage",
       "version": "1.0",
       "domain": "DSP",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "DSP-03",
         "STA-07"
@@ -728,6 +780,7 @@
       "name": "verifying-model-integrity-and-provenance-signing",
       "version": "1.0",
       "domain": "MDS",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "MDS-03",
         "CCC-04"
@@ -742,6 +795,7 @@
       "name": "verifying-open-model-supply-chain-integrity",
       "version": "1.0",
       "domain": "STA",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "STA-07",
         "MDS-03"
@@ -756,6 +810,7 @@
       "name": "versioning-models-and-system-prompts-with-rollback",
       "version": "1.0",
       "domain": "CCC",
+      "pillar": "security_for_ai",
       "aicm_controls": [
         "CCC-03",
         "CCC-04"

@@ -1,4 +1,4 @@
-# Skill Schema Reference — v2
+# Skill Schema Reference · v2.1
 
 Every skill in this library is a single `SKILL.md` file in its own directory. The file has two parts: a YAML frontmatter block and a Markdown body.
 
@@ -21,6 +21,7 @@ aicm_controls:                # AICM v1.0.3 control objective IDs this skill pro
 ssrm_ownership: <value>       # SSRM ownership role (see allowed list below).
 aismm_category: <value>       # AISMM category (see allowed list below).
 aismm_target_level: <1-5>     # AISMM maturity level this skill is designed for.
+pillar: <value>               # Optional. One of three pillars (see list below).
 summary: >-                   # One-paragraph "when to use this" description.
   <text>                      # Min 50 chars. Used by agents for skill selection.
 references:                   # Surface tags: tool names, concepts, standard names.
@@ -29,6 +30,8 @@ references:                   # Surface tags: tool names, concepts, standard nam
 ```
 
 **Required fields:** `id`, `name`, `version`, `domain`, `aicm_controls`, `ssrm_ownership`, `aismm_category`, `aismm_target_level`, `summary`
+
+**Optional fields:** `pillar` (see Allowed `pillar` values below), `references`, and standard-reference tags such as `atlas_techniques` and `nist_ai_rmf`.
 
 **`references`** carries only surface-level tags. It does **not** contain framework mapping tables. Framework crosswalks (AICM, AI-CAIQ, AISMM, ISO 42001, NIST AI RMF) are metadata expressed via the structured fields above.
 
@@ -101,6 +104,21 @@ AIC = AI Customer
 | 3 | Defined | Standardised, consistently applied |
 | 4 | Capable | Measured, monitored, partially automated |
 | 5 | Efficient | Optimised, continuously improved |
+
+---
+
+## Allowed `pillar` values
+
+The `pillar` field groups each skill under one of three pillars. This is our own
+organizing taxonomy, defined here; it is independent of any external maturity model
+and is distinct from the CSA `aismm_*` fields, which grade maturity rather than group
+by purpose. The full grouping of the library is in [PILLARS.md](PILLARS.md).
+
+| Value | Pillar | Focus |
+|---|---|---|
+| `security_for_ai` | Security for AI | Protecting AI systems throughout their lifecycle |
+| `ai_for_security` | AI for Security | Deploying AI as a security capability |
+| `security_from_ai` | Security from AI | Managing AI-specific risks and harms |
 
 ---
 

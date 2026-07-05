@@ -12,6 +12,7 @@ aicm_controls:
 ssrm_ownership: AP-Owned
 aismm_category: Organization Management
 aismm_target_level: 3
+pillar: security_for_ai
 summary: >-
   Use this skill when you need to implement version control and rollback
   capability for AI model artifacts and system prompts, so that a bad
