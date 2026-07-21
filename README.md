@@ -1,6 +1,6 @@
 # ai · security · skills — reference library v2
 
-An open sample of a structured AI security skill library, aligned to the CSA AI assurance stack: **AICM v1.0.3** (18 control domains, 243 control objectives), the **AI-CAIQ v1.0.2** self-assessment instrument, and the **AISMM** (5-level Initial→Efficient maturity scale).
+An open sample of a structured AI security skill library, aligned to the CSA AI assurance stack: **AICM v1.0.3** (18 control domains), the **AI-CAIQ v1.0.2** self-assessment instrument, and the **AISMM** (5-level Initial→Efficient maturity scale).
 
 → **[Quickstart in ~10 minutes](quickstart/README.md)**
 
@@ -10,27 +10,39 @@ An open sample of a structured AI security skill library, aligned to the CSA AI 
 
 Each skill is a `SKILL.md` file: a structured document that tells an AI agent *exactly* how to perform a specific AI security task. An agent loads the skill as context, receives the practitioner's input, and executes the procedure.
 
-This repository contains **40 AI-native skills** across the 18 AICM control domains:
+This repository contains **56 AI-native skills** (count derived from `skills/*/SKILL.md` via `scripts/rebuild_index.py`). Skills are grouped under the three pillars defined in [SKILL_SPEC.md](SKILL_SPEC.md) / [PILLARS.md](PILLARS.md), and each skill also maps to exactly one of the 18 AICM control domains present in this sample:
+
+### By pillar
+
+| Pillar | Focus | Skills |
+|---|---|---|
+| **Security for AI** | Protecting AI systems throughout their lifecycle | 35 |
+| **AI for Security** | Deploying AI as a security capability | 1 |
+| **Security from AI** | Managing AI-specific risks and harms | 20 |
+
+See [PILLARS.md](PILLARS.md) for the full per-skill lists.
+
+### By AICM domain
 
 | AICM domain | ID | Skills |
 |---|---|---|
-| Application & Interface Security | AIS | 4 |
-| Data Security and Privacy Lifecycle Management | DSP | 4 |
-| Identity & Access Management | IAM | 4 |
-| Model Security | MDS | 4 |
-| Threat & Vulnerability Management | TVM | 3 |
-| Supply Chain Management, Transparency, and Accountability | STA | 3 |
-| Logging and Monitoring | LOG | 3 |
+| Application & Interface Security | AIS | 11 |
+| Model Security | MDS | 6 |
+| Data Security and Privacy Lifecycle Management | DSP | 5 |
+| Identity & Access Management | IAM | 5 |
+| Logging and Monitoring | LOG | 5 |
+| Supply Chain Management, Transparency, and Accountability | STA | 4 |
+| Threat & Vulnerability Management | TVM | 4 |
 | Governance, Risk and Compliance | GRC | 3 |
-| Security Incident Management, E-Discovery, & Cloud Forensics | SEF | 2 |
+| Security Incident Management, E-Discovery, & Cloud Forensics | SEF | 3 |
 | Audit & Assurance | A&A | 2 |
 | Business Continuity Management and Operational Resilience | BCR | 1 |
 | Change Control and Configuration Management | CCC | 1 |
 | Cryptography, Encryption & Key Management | CEK | 1 |
 | Datacenter Security | DCS | 1 |
 | Human Resources | HRS | 1 |
-| Interoperability & Portability | IPY | 1 |
 | Infrastructure Security | I&S | 1 |
+| Interoperability & Portability | IPY | 1 |
 | Universal Endpoint Management | UEM | 1 |
 
 Skills are licensed **Apache 2.0**.
@@ -39,7 +51,7 @@ Skills are licensed **Apache 2.0**.
 
 ## What this is NOT
 
-- **Not the full library.** The full working library is substantially larger, with framework crosswalks, the MECE AICM partition, AISMM scoring, and a governance layer. This repository is a representative sample.
+- **Not the full library.** The full working library is substantially larger, with framework crosswalks, the MECE AICM partition, AISMM scoring, and a governance layer. This repository is a representative sample (56 skills on disk).
 - **Not a product.** There is no subscription, agent runtime, or tooling here — only structured knowledge in a portable plain-text format.
 - **Not a certification.** Nothing here constitutes compliance advice, regulatory certification, or a completed audit. STAR for AI Level 1 is a self-assessment registry listing.
 
@@ -50,7 +62,7 @@ Skills are licensed **Apache 2.0**.
 Skills in this library are mapped to three complementary CSA instruments:
 
 **AICM v1.0.3 — what controls exist**
-18 control domains and 243 control objectives define the AI security control landscape. Each skill lists which control objectives it provides evidence for (`aicm_controls`).
+18 control domains and the published CSA control-objective set define the AI security control landscape. Each skill lists which control objectives it provides evidence for (`aicm_controls`).
 
 **AI-CAIQ v1.0.2 — are they answered**
 The AI Cloud Infrastructure and Controls Questionnaire asks each control objective: YES / NO / NA, with SSRM ownership (who in the supply chain owns it) and an evidence artefact. A skill's output is the evidence that supports a YES response.
@@ -81,7 +93,7 @@ When you execute a skill and document the output, that output supports a YES res
 
 **Browsing:**
 
-`index.json` lists all 40 skills with their AICM domain, controls, SSRM role, AISMM category, target level, and summary — useful for programmatic selection.
+`index.json` lists all 56 skills with their AICM domain, controls, SSRM role, AISMM category, target level, pillar, and summary — useful for programmatic selection. Regenerate it with `python3 scripts/rebuild_index.py` after adding or editing skills.
 
 ---
 

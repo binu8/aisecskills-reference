@@ -28,4 +28,11 @@ By submitting a contribution you agree to license it under Apache 2.0, consisten
 
 ## Schema
 
-All skills must pass schema validation (`python3 scripts/validate.py`). The required frontmatter fields are: `id`, `name`, `version`, `domain`, `aicm_controls`, `ssrm_ownership`, `aismm_category`, `aismm_target_level`, `summary`. The `pillar` field is optional, but when present must be one of `security_for_ai`, `ai_for_security`, `security_from_ai`. The required body sections are `## When to Use` and `## Procedure`. See [SKILL_SPEC.md](SKILL_SPEC.md) for the full specification and [PILLARS.md](PILLARS.md) for the pillar grouping.
+All skills must pass schema validation (`python3 scripts/validate.py`). After adding or editing skills, regenerate the machine index and derived docs:
+
+```bash
+python3 scripts/rebuild_index.py --docs
+python3 scripts/validate.py
+```
+
+The required frontmatter fields are: `id`, `name`, `version`, `domain`, `aicm_controls`, `ssrm_ownership`, `aismm_category`, `aismm_target_level`, `summary`. The `pillar` field is optional, but when present must be one of `security_for_ai`, `ai_for_security`, `security_from_ai`. The required body sections are `## When to Use` and `## Procedure`. See [SKILL_SPEC.md](SKILL_SPEC.md) for the full specification and [PILLARS.md](PILLARS.md) for the pillar grouping.

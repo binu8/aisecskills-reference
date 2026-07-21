@@ -23,6 +23,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 INDEX = REPO / "index.json"
 SKILLS_DIR = REPO / "skills"
+README = REPO / "README.md"
 
 SCHEMA_VERSION = "2.1"
 
@@ -163,12 +164,53 @@ def validate() -> list[str]:
         errors.append(f"skills/ directory not found at {SKILLS_DIR}")
         return errors
 
+    skill_md_ids = {
+        p.parent.name
+        for p in SKILLS_DIR.glob("*/SKILL.md")
+        if p.is_file()
+    }
     dir_ids = {p.name for p in SKILLS_DIR.iterdir() if p.is_dir()}
+
+    if data.get("skill_count") != len(skill_md_ids):
+        errors.append(
+            f"skill_count ({data.get('skill_count')}) != number of "
+            f"skills/*/SKILL.md on disk ({len(skill_md_ids)})"
+        )
 
     for missing in sorted(index_ids - dir_ids):
         errors.append(f"{missing}: in index.json but no skills/{missing}/ directory")
     for extra in sorted(dir_ids - index_ids):
         errors.append(f"{extra}: skills/{extra}/ directory but not in index.json")
+    for orphan_md in sorted(skill_md_ids - index_ids):
+        errors.append(f"{orphan_md}: SKILL.md on disk but not in index.json")
+    for missing_md in sorted(index_ids - skill_md_ids):
+        errors.append(f"{missing_md}: in index.json but skills/{missing_md}/SKILL.md missing")
+
+    # README must state the same skill count (guards silent drift after skill adds).
+    if README.exists():
+        readme = README.read_text(encoding="utf-8")
+        claimed = re.findall(
+            r"\*\*(\d+)\s+AI-native skills\*\*",
+            readme,
+        )
+        claimed += re.findall(
+            r"`index\.json` lists all (\d+) skills",
+            readme,
+        )
+        expected = str(data.get("skill_count"))
+        for c in claimed:
+            if c != expected:
+                errors.append(
+                    f"README.md claims {c} skills but index.json skill_count is {expected} "
+                    f"(re-run: python3 scripts/rebuild_index.py --docs)"
+                )
+        if not claimed:
+            errors.append(
+                "README.md missing derived skill-count phrase "
+                "'**N AI-native skills**' (re-run rebuild_index.py --docs)"
+            )
+    else:
+        errors.append(f"README.md not found at {README}")
 
     index_by_id = {e.get("id"): e for e in skills}
 

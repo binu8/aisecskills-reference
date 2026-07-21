@@ -2,14 +2,13 @@
   "schema_version": "2.1",
   "skill_count": 56,
   "license": "Apache-2.0",
-  "note": "aicm_controls and ssrm_ownership are proposed mappings \u2014 verify against AICM v1.0.3 before formal self-assessments.",
+  "note": "aicm_controls and ssrm_ownership are proposed mappings — verify against AICM v1.0.3 before formal self-assessments.",
   "skills": [
     {
       "id": "applying-zero-trust-to-ai-workloads",
       "name": "applying-zero-trust-to-ai-workloads",
       "version": "1.0",
       "domain": "I&S",
-      "pillar": "security_for_ai",
       "aicm_controls": [
         "I&S-04",
         "IAM-03"
@@ -17,14 +16,14 @@
       "ssrm_ownership": "Shared Across Supply Chain",
       "aismm_category": "Infrastructure Security & Resilience",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need to apply zero-trust principles to AI workload networking \u2014 ensuring no implicit trust between AI services, agents, and data stores, with continuous verification at every layer."
+      "summary": "Use this skill when you need to apply zero-trust principles to AI workload networking — ensuring no implicit trust between AI services, agents, and data stores, with continuous verification at every layer.",
+      "pillar": "security_for_ai"
     },
     {
       "id": "assessing-jailbreak-resistance-pre-deployment",
       "name": "assessing-jailbreak-resistance-pre-deployment",
       "version": "1.0",
       "domain": "TVM",
-      "pillar": "security_for_ai",
       "aicm_controls": [
         "TVM-03",
         "AIS-09"
@@ -32,14 +31,14 @@
       "ssrm_ownership": "AP-Owned",
       "aismm_category": "App Security",
       "aismm_target_level": 3,
-      "summary": "Use this skill when you need to quantitatively score a deployed or pre-production LLM system's resistance to jailbreak attempts before go-live, producing a pass/fail safety gate result."
+      "summary": "Use this skill when you need to quantitatively score a deployed or pre-production LLM system's resistance to jailbreak attempts before go-live, producing a pass/fail safety gate result.",
+      "pillar": "security_for_ai"
     },
     {
       "id": "assessing-third-party-model-and-provider-risk",
       "name": "assessing-third-party-model-and-provider-risk",
       "version": "1.0",
       "domain": "STA",
-      "pillar": "security_for_ai",
       "aicm_controls": [
         "STA-03",
         "GRC-08"
@@ -47,14 +46,14 @@
       "ssrm_ownership": "AIC-Owned",
       "aismm_category": "Risk & Provider Assessment & Management",
       "aismm_target_level": 3,
-      "summary": "Use this skill when you need to evaluate the security, privacy, and compliance risks of adopting a third-party AI model provider, API service, or pre-trained model before onboarding."
+      "summary": "Use this skill when you need to evaluate the security, privacy, and compliance risks of adopting a third-party AI model provider, API service, or pre-trained model before onboarding.",
+      "pillar": "security_for_ai"
     },
     {
       "id": "bounding-agent-autonomy-and-tool-scopes-least-privilege",
       "name": "bounding-agent-autonomy-and-tool-scopes-least-privilege",
       "version": "1.0",
       "domain": "IAM",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "IAM-09",
         "AIS-10"
@@ -62,14 +61,14 @@
       "ssrm_ownership": "AP-Owned",
       "aismm_category": "IAM",
       "aismm_target_level": 4,
-      "summary": "Use this skill when an AI agent can invoke state-changing tools and you need to bound its blast radius with least-privilege tool scopes, rate limits, and budgets enforced by a fail-closed broker."
+      "summary": "Use this skill when an AI agent can invoke tools that change state outside the conversation and you need to bound its blast radius — giving every callable tool a least-privilege scope, a per-action rate limit, and an aggregate budget, enforced by a broker that fails closed on out-of-scope calls, with autonomy capped per maturity tier.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "building-an-ai-incident-response-playbook",
       "name": "building-an-ai-incident-response-playbook",
       "version": "1.0",
       "domain": "SEF",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "SEF-03",
         "SEF-06"
@@ -77,14 +76,14 @@
       "ssrm_ownership": "AIC-Owned",
       "aismm_category": "Incident Response",
       "aismm_target_level": 3,
-      "summary": "Use this skill when you need to create or update an incident response playbook that covers AI-specific incident types \u2014 model compromise, prompt injection attacks, data leakage through LLM outputs, and agent credential theft."
+      "summary": "Use this skill when you need to create or update an incident response playbook that covers AI-specific incident types — model compromise, prompt injection attacks, data leakage through LLM outputs, and agent credential theft.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "building-an-ai-risk-register",
       "name": "building-an-ai-risk-register",
       "version": "1.0",
       "domain": "GRC",
-      "pillar": "security_for_ai",
       "aicm_controls": [
         "GRC-02",
         "GRC-03"
@@ -92,14 +91,14 @@
       "ssrm_ownership": "AIC-Owned",
       "aismm_category": "Risk & Provider Assessment & Management",
       "aismm_target_level": 3,
-      "summary": "Use this skill when you need to create or maintain a structured AI risk register that captures, scores, and tracks mitigations for identified risks across an organization's AI portfolio."
+      "summary": "Use this skill when you need to create or maintain a structured AI risk register that captures, scores, and tracks mitigations for identified risks across an organization's AI portfolio.",
+      "pillar": "security_for_ai"
     },
     {
       "id": "capturing-agent-action-and-delegation-telemetry",
       "name": "capturing-agent-action-and-delegation-telemetry",
       "version": "1.0",
       "domain": "LOG",
-      "pillar": "security_for_ai",
       "aicm_controls": [
         "LOG-05",
         "LOG-13"
@@ -107,14 +106,14 @@
       "ssrm_ownership": "Shared OSP-AP",
       "aismm_category": "Security Monitoring",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need to instrument an AI agent system to capture every tool call, sub-agent delegation, and state transition as structured telemetry for security investigation and compliance purposes."
+      "summary": "Use this skill when you need to instrument an AI agent system to capture every tool call, sub-agent delegation, and state transition as structured telemetry for security investigation and compliance purposes.",
+      "pillar": "security_for_ai"
     },
     {
       "id": "classifying-ai-systems-under-eu-ai-act",
       "name": "classifying-ai-systems-under-eu-ai-act",
       "version": "1.0",
       "domain": "GRC",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "GRC-05",
         "A&A-04"
@@ -122,14 +121,14 @@
       "ssrm_ownership": "AIC-Owned",
       "aismm_category": "Privacy, Compliance and Audit",
       "aismm_target_level": 3,
-      "summary": "Use this skill when you need to classify an AI system under the EU AI Act risk tiers \u2014 unacceptable, high-risk, limited, or minimal \u2014 and determine the resulting compliance obligations."
+      "summary": "Use this skill when you need to classify an AI system under the EU AI Act risk tiers — unacceptable, high-risk, limited, or minimal — and determine the resulting compliance obligations.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "completing-the-ai-caiq-self-assessment",
       "name": "completing-the-ai-caiq-self-assessment",
       "version": "1.0",
       "domain": "A&A",
-      "pillar": "security_for_ai",
       "aicm_controls": [
         "A&A-01",
         "A&A-06"
@@ -137,28 +136,28 @@
       "ssrm_ownership": "AIC-Owned",
       "aismm_category": "Privacy, Compliance and Audit",
       "aismm_target_level": 3,
-      "summary": "Use this skill when you need to complete the CSA AI Consensus Assessments Initiative Questionnaire (AI-CAIQ) for your organization, producing a shareable, verifiable self-attestation of AI security controls."
+      "summary": "Use this skill when you need to complete the CSA AI Consensus Assessments Initiative Questionnaire (AI-CAIQ) for your organization, producing a shareable, verifiable self-attestation of AI security controls.",
+      "pillar": "security_for_ai"
     },
     {
       "id": "conducting-adversarial-robustness-testing",
       "name": "conducting-adversarial-robustness-testing",
       "version": "1.0",
       "domain": "MDS",
-      "pillar": "security_for_ai",
       "aicm_controls": [
         "MDS-05"
       ],
       "ssrm_ownership": "MP-Owned",
       "aismm_category": "Model Security",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need to systematically measure how an AI model responds to adversarial inputs \u2014 perturbations, out-of-distribution samples, and evasion attacks \u2014 before production deployment."
+      "summary": "Use this skill when you need to systematically measure how an AI model responds to adversarial inputs — perturbations, out-of-distribution samples, and evasion attacks — before production deployment.",
+      "pillar": "security_for_ai"
     },
     {
       "id": "conducting-an-aicm-control-assessment",
       "name": "conducting-an-aicm-control-assessment",
       "version": "1.0",
       "domain": "A&A",
-      "pillar": "security_for_ai",
       "aicm_controls": [
         "A&A-02",
         "A&A-05"
@@ -166,42 +165,42 @@
       "ssrm_ownership": "AIC-Owned",
       "aismm_category": "Privacy, Compliance and Audit",
       "aismm_target_level": 3,
-      "summary": "Use this skill when you need to conduct a structured assessment of your organization's AI controls against the CSA AICM control framework, producing a scored maturity profile and gap remediation plan."
+      "summary": "Use this skill when you need to conduct a structured assessment of your organization's AI controls against the CSA AICM control framework, producing a scored maturity profile and gap remediation plan.",
+      "pillar": "security_for_ai"
     },
     {
       "id": "defending-against-prompt-injection",
       "name": "defending-against-prompt-injection",
       "version": "1.0",
       "domain": "AIS",
-      "pillar": "security_for_ai",
       "aicm_controls": [
         "AIS-08"
       ],
       "ssrm_ownership": "AP-Owned",
       "aismm_category": "App Security",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need to harden an LLM application against prompt injection attacks, where adversarial content in user inputs or retrieved documents attempts to override system instructions or exfiltrate data."
+      "summary": "Use this skill when you need to harden an LLM application against prompt injection attacks, where adversarial content in user inputs or retrieved documents attempts to override system instructions or exfiltrate data.",
+      "pillar": "security_for_ai"
     },
     {
       "id": "deploying-llm-output-guardrails",
       "name": "deploying-llm-output-guardrails",
       "version": "1.0",
       "domain": "AIS",
-      "pillar": "security_for_ai",
       "aicm_controls": [
         "AIS-09"
       ],
       "ssrm_ownership": "AP-Owned",
       "aismm_category": "App Security",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need to intercept, classify, and block or rewrite unsafe, off-topic, or policy-violating LLM outputs before they reach end users, using layered guardrail controls."
+      "summary": "Use this skill when you need to intercept, classify, and block or rewrite unsafe, off-topic, or policy-violating LLM outputs before they reach end users, using layered guardrail controls.",
+      "pillar": "security_for_ai"
     },
     {
       "id": "designing-ai-service-failover-and-resilience",
       "name": "designing-ai-service-failover-and-resilience",
       "version": "1.0",
       "domain": "BCR",
-      "pillar": "security_for_ai",
       "aicm_controls": [
         "BCR-03",
         "BCR-08"
@@ -209,28 +208,28 @@
       "ssrm_ownership": "Shared OSP-AP",
       "aismm_category": "Infrastructure Security & Resilience",
       "aismm_target_level": 3,
-      "summary": "Use this skill when you need to design failover and resilience patterns for AI services \u2014 including LLM API fallback, model endpoint redundancy, and graceful degradation under provider outages."
+      "summary": "Use this skill when you need to design failover and resilience patterns for AI services — including LLM API fallback, model endpoint redundancy, and graceful degradation under provider outages.",
+      "pillar": "security_for_ai"
     },
     {
       "id": "detect-mcp-adversarial-input-corpus",
       "name": "detect-mcp-adversarial-input-corpus",
       "version": "1.0",
       "domain": "AIS",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "AIS-08"
       ],
       "ssrm_ownership": "Shared OSP-AP",
       "aismm_category": "Security Monitoring",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need runtime detection of adversarial prompts / jailbreak attempts matching a curated fingerprint catalog, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+      "summary": "Use this skill when you need runtime detection of adversarial prompts / jailbreak attempts matching a curated fingerprint catalog, by running the vendored detector to detect MCP requests whose prompt matches an entry in a curated adversarial-input fingerprint catalog (prompt injection, jailbreak, role-play hijack) and emit OCSF detection findings.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "detect-mcp-model-artifact-tampering",
       "name": "detect-mcp-model-artifact-tampering",
       "version": "1.0",
       "domain": "MDS",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "MDS-05",
         "STA-06"
@@ -238,14 +237,14 @@
       "ssrm_ownership": "Shared OSP-AP",
       "aismm_category": "Security Monitoring",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need runtime detection of ML supply-chain compromise where an MCP server swaps a model artifact (weights, adapter, tokenizer) mid-session, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+      "summary": "Use this skill when you need runtime detection of ML supply-chain compromise where an MCP server swaps a model artifact (weights, adapter, tokenizer) mid-session, by running the vendored detector to detect MCP tool calls whose returned model artifact hash diverges from a known-good baseline registered at session start (ML supply-chain tampering) and emit OCSF detection findings.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "detect-mcp-model-token-flood",
       "name": "detect-mcp-model-token-flood",
       "version": "1.0",
       "domain": "MDS",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "MDS-07",
         "AIS-07"
@@ -253,14 +252,14 @@
       "ssrm_ownership": "Shared OSP-AP",
       "aismm_category": "Security Monitoring",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need runtime detection of unbounded prompt-token consumption against a model endpoint over MCP (OWASP LLM10), running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+      "summary": "Use this skill when you need runtime detection of unbounded prompt-token consumption against a model endpoint over MCP (OWASP LLM10), by running the vendored detector to detect unbounded prompt-token consumption against a model endpoint over MCP (the OWASP LLM10 pattern on the model-input side) and emit OCSF detection findings.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "detect-mcp-plugin-supply-chain",
       "name": "detect-mcp-plugin-supply-chain",
       "version": "1.0",
       "domain": "STA",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "STA-06",
         "AIS-10"
@@ -268,14 +267,14 @@
       "ssrm_ownership": "Shared OSP-AP",
       "aismm_category": "Security Monitoring",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need runtime detection of MCP plugin/tool whose inputSchema references a hostname outside an allowlist (supply-chain risk), running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+      "summary": "Use this skill when you need runtime detection of MCP plugin/tool whose inputSchema references a hostname outside an allowlist (supply-chain risk), by running the vendored detector to detect MCP tools/list responses where a tool's inputSchema references a hostname not in `MCP_PLUGIN_ALLOWED_HOSTS` (plugin supply-chain risk) and emit OCSF detection findings.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "detect-mcp-shadow-tool-injection",
       "name": "detect-mcp-shadow-tool-injection",
       "version": "1.0",
       "domain": "AIS",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "AIS-10",
         "STA-06"
@@ -283,14 +282,14 @@
       "ssrm_ownership": "Shared OSP-AP",
       "aismm_category": "Security Monitoring",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need runtime detection of MCP tool poisoning where a tool's description or inputSchema is mutated mid-session away from a server-registered baseline, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+      "summary": "Use this skill when you need runtime detection of MCP tool poisoning where a tool's description or inputSchema is mutated mid-session away from a server-registered baseline, by running the vendored detector to detect MCP tools whose description or inputSchema has been mutated mid-session relative to a server-registered baseline (the shadow-tool / tool-poisoning attack) and emit OCSF detection findings.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "detect-mcp-tool-drift",
       "name": "detect-mcp-tool-drift",
       "version": "1.0",
       "domain": "AIS",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "AIS-10",
         "STA-06"
@@ -298,56 +297,56 @@
       "ssrm_ownership": "Shared OSP-AP",
       "aismm_category": "Security Monitoring",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need runtime detection of MCP tool-poisoning / rug-pull where a tool's schema changes within a session after the agent has already trusted it, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+      "summary": "Use this skill when you need runtime detection of MCP tool-poisoning / rug-pull where a tool's schema changes within a session after the agent has already trusted it, by running the vendored detector to detect MCP tool schema drift within a session (the tool-poisoning / rug-pull pattern) by fingerprinting each tool per session and flagging any change and emit OCSF detection findings.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "detect-mcp-unbounded-tool-output",
       "name": "detect-mcp-unbounded-tool-output",
       "version": "1.0",
       "domain": "AIS",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "AIS-07"
       ],
       "ssrm_ownership": "Shared OSP-AP",
       "aismm_category": "Security Monitoring",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need runtime detection of unbounded tool-output consumption (OWASP LLM10) where a tool systematically breaches output ceilings, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+      "summary": "Use this skill when you need runtime detection of unbounded tool-output consumption (OWASP LLM10) where a tool systematically breaches output ceilings, by running the vendored detector to detect MCP tools whose response payloads systematically exceed operator-set output ceilings (the OWASP LLM10 unbounded-consumption pattern on the tool-output side) and emit OCSF detection findings.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "detect-prompt-injection-mcp-proxy",
       "name": "detect-prompt-injection-mcp-proxy",
       "version": "1.0",
       "domain": "AIS",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "AIS-08"
       ],
       "ssrm_ownership": "Shared OSP-AP",
       "aismm_category": "Security Monitoring",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need runtime detection of prompt-injection and instruction-smuggling language embedded in MCP tool descriptions, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+      "summary": "Use this skill when you need runtime detection of prompt-injection and instruction-smuggling language embedded in MCP tool descriptions, by running the vendored detector to detect suspicious prompt-injection and instruction-smuggling language in MCP tool descriptions observed at the proxy and emit OCSF detection findings.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "detect-system-prompt-extraction",
       "name": "detect-system-prompt-extraction",
       "version": "1.0",
       "domain": "AIS",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "AIS-08"
       ],
       "ssrm_ownership": "Shared OSP-AP",
       "aismm_category": "Security Monitoring",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need runtime detection of MCP tool-call responses that leak system-prompt or hidden-instruction material, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+      "summary": "Use this skill when you need runtime detection of MCP tool-call responses that leak system-prompt or hidden-instruction material, by running the vendored detector to detect MCP tool-call responses that look like leaked system-prompt or hidden-instruction material and emit OCSF detection findings.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "detect-tool-output-exfiltration-instructions",
       "name": "detect-tool-output-exfiltration-instructions",
       "version": "1.0",
       "domain": "DSP",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "DSP-06",
         "AIS-08"
@@ -355,14 +354,14 @@
       "ssrm_ownership": "Shared OSP-AP",
       "aismm_category": "Security Monitoring",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need runtime detection of MCP tool-call responses instructing the agent to exfiltrate conversation history, prompts, files, or secrets, running the vendored detector over OCSF-normalized MCP activity to emit detection findings."
+      "summary": "Use this skill when you need runtime detection of MCP tool-call responses instructing the agent to exfiltrate conversation history, prompts, files, or secrets, by running the vendored detector to detect MCP tool-call responses that explicitly instruct an agent to exfiltrate conversation history, prompts, files, or secrets and emit OCSF detection findings.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "detecting-cascading-and-feedback-loop-agent-behavior",
       "name": "detecting-cascading-and-feedback-loop-agent-behavior",
       "version": "1.0",
       "domain": "LOG",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "LOG-03",
         "LOG-13"
@@ -370,14 +369,14 @@
       "ssrm_ownership": "AP-Owned",
       "aismm_category": "Security Monitoring",
       "aismm_target_level": 4,
-      "summary": "Use this skill when agents can chain actions or read from and write to a shared source, and you need to detect cascades and feedback loops behind a circuit-breaker."
+      "summary": "Use this skill when agents can chain actions or both read from and write to a shared data source, and you need to detect cascades (one action triggering another) and feedback loops (agents amplifying content they themselves wrote) — combining call-graph depth analysis, write-then-read pattern detection, and rate-of-change anomalies behind a circuit-breaker.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "detecting-deepfake-audio-in-vishing-attacks",
       "name": "detecting-deepfake-audio-in-vishing-attacks",
       "version": "1.0",
       "domain": "TVM",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "TVM-03",
         "SEF-05"
@@ -385,14 +384,14 @@
       "ssrm_ownership": "AIC-Owned",
       "aismm_category": "Incident Response",
       "aismm_target_level": 3,
-      "summary": "Use this skill when you need to determine whether a recorded phone call contains AI-generated deepfake speech, extracting spectral features to classify the audio and produce a forensic report."
+      "summary": "Use this skill when you need to determine whether a recorded phone call contains AI-generated (deepfake) speech — for example a suspected vishing call that cloned an executive's voice to authorize a wire transfer — by extracting spectral features and classifying the audio, then producing a forensic report.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "detecting-prompt-injection-and-jailbreak-attempts",
       "name": "detecting-prompt-injection-and-jailbreak-attempts",
       "version": "1.0",
       "domain": "LOG",
-      "pillar": "security_for_ai",
       "aicm_controls": [
         "LOG-08",
         "AIS-08"
@@ -400,14 +399,14 @@
       "ssrm_ownership": "AP-Owned",
       "aismm_category": "Security Monitoring",
       "aismm_target_level": 4,
-      "summary": "Use this skill when you need to monitor LLM application logs for prompt injection and jailbreak attempts in real time, alert on patterns, and feed detections into a SIEM for incident response."
+      "summary": "Use this skill when you need to monitor LLM application logs for prompt injection and jailbreak attempts in real time, alert on patterns, and feed detections into a SIEM for incident response.",
+      "pillar": "security_for_ai"
     },
     {
       "id": "enabling-model-and-data-portability-and-export",
       "name": "enabling-model-and-data-portability-and-export",
       "version": "1.0",
       "domain": "IPY",
-      "pillar": "security_for_ai",
       "aicm_controls": [
         "IPY-02",
         "IPY-04"
@@ -415,14 +414,14 @@
       "ssrm_ownership": "Shared MP-OSP",
       "aismm_category": "Data Security",
       "aismm_target_level": 3,
-      "summary": "Use this skill when you need to implement model and training data export capabilities so that an organization can migrate away from a provider, exercise data portability rights, or fulfill GDPR data export obligations."
+      "summary": "Use this skill when you need to implement model and training data export capabilities so that an organization can migrate away from a provider, exercise data portability rights, or fulfill GDPR data export obligations.",
+      "pillar": "security_for_ai"
     },
     {
       "id": "establishing-ai-acceptable-use-and-developer-training",
       "name": "establishing-ai-acceptable-use-and-developer-training",
       "version": "1.0",
       "domain": "HRS",
-      "pillar": "security_for_ai",
       "aicm_controls": [
         "HRS-04",
         "HRS-11"
@@ -430,402 +429,28 @@
       "ssrm_ownership": "AIC-Owned",
       "aismm_category": "Governance",
       "aismm_target_level": 3,
-      "summary": "Use this skill when you need to create an AI acceptable use policy, security training curriculum, and attestation process for developers and staff who build or use AI systems."
+      "summary": "Use this skill when you need to create an AI acceptable use policy, security training curriculum, and attestation process for developers and staff who build or use AI systems.",
+      "pillar": "security_for_ai"
     },
     {
       "id": "evaluating-model-safety-bias-and-harm",
       "name": "evaluating-model-safety-bias-and-harm",
       "version": "1.0",
       "domain": "MDS",
-      "pillar": "security_from_ai",
       "aicm_controls": [
         "MDS-09"
       ],
       "ssrm_ownership": "MP-Owned",
       "aismm_category": "Model Security",
       "aismm_target_level": 3,
-      "summary": "Use this skill when you need to systematically evaluate an AI model for safety failures, demographic bias, and harmful output potential before releasing it to production or a broader audience."
-    },
-    {
-      "id": "generating-an-ai-bill-of-materials",
-      "name": "generating-an-ai-bill-of-materials",
-      "version": "1.0",
-      "domain": "STA",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "STA-07",
-        "STA-09"
-      ],
-      "ssrm_ownership": "AP-Owned",
-      "aismm_category": "AI Supported Development & Supply Chain Security",
-      "aismm_target_level": 4,
-      "summary": "Use this skill when you need to produce a machine-readable AI Bill of Materials that inventories all models, datasets, libraries, and supply chain dependencies for an AI system deployment."
-    },
-    {
-      "id": "governing-ai-coding-assistant-endpoints",
-      "name": "governing-ai-coding-assistant-endpoints",
-      "version": "1.0",
-      "domain": "UEM",
-      "pillar": "security_from_ai",
-      "aicm_controls": [
-        "UEM-03",
-        "UEM-09"
-      ],
-      "ssrm_ownership": "AIC-Owned",
-      "aismm_category": "Organization Management",
-      "aismm_target_level": 3,
-      "summary": "Use this skill when you need to govern which AI coding assistant endpoints developers may connect to from managed devices, preventing data leakage to unapproved external AI services through IDE plugins and CLI tools."
-    },
-    {
-      "id": "hardening-agent-orchestration-against-drift",
-      "name": "hardening-agent-orchestration-against-drift",
-      "version": "1.0",
-      "domain": "AIS",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "AIS-08",
-        "AIS-09"
-      ],
-      "ssrm_ownership": "OSP-Owned",
-      "aismm_category": "App Security",
-      "aismm_target_level": 4,
-      "summary": "Use this skill when you need to prevent an AI agent orchestration system from drifting outside its intended scope through goal hijacking, runaway loops, or unauthorized sub-agent delegation."
-    },
-    {
-      "id": "implementing-content-safety-output-filtering",
-      "name": "implementing-content-safety-output-filtering",
-      "version": "1.0",
-      "domain": "AIS",
-      "pillar": "security_from_ai",
-      "aicm_controls": [
-        "AIS-08",
-        "MDS-07"
-      ],
-      "ssrm_ownership": "AP-Owned",
-      "aismm_category": "App Security",
-      "aismm_target_level": 4,
-      "summary": "Use this skill when a generative AI application exposes free-form output to end users and you need to filter that output through a content-safety classifier before it reaches them."
-    },
-    {
-      "id": "implementing-kill-switch-and-rollback-for-autonomous-agents",
-      "name": "implementing-kill-switch-and-rollback-for-autonomous-agents",
-      "version": "1.0",
-      "domain": "SEF",
-      "pillar": "security_from_ai",
-      "aicm_controls": [
-        "SEF-03",
-        "SEF-06"
-      ],
-      "ssrm_ownership": "AP-Owned",
-      "aismm_category": "Incident Response",
-      "aismm_target_level": 4,
-      "summary": "Use this skill when an autonomous AI agent holds state-changing permissions in production and you need an emergency kill switch and per-action rollback the SOC can invoke within seconds."
-    },
-    {
-      "id": "implementing-on-behalf-of-delegation-and-consent",
-      "name": "implementing-on-behalf-of-delegation-and-consent",
-      "version": "1.0",
-      "domain": "IAM",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "IAM-05",
-        "IAM-13"
-      ],
-      "ssrm_ownership": "Shared AP-AIC",
-      "aismm_category": "IAM",
-      "aismm_target_level": 4,
-      "summary": "Use this skill when an AI agent must act on behalf of a human user, requiring explicit OAuth delegation flows, consent capture, and auditable on-behalf-of token chains to prevent privilege escalation."
-    },
-    {
-      "id": "implementing-permission-aware-retrieval-for-rag",
-      "name": "implementing-permission-aware-retrieval-for-rag",
-      "version": "1.0",
-      "domain": "DSP",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "DSP-07",
-        "IAM-05"
-      ],
-      "ssrm_ownership": "AP-Owned",
-      "aismm_category": "Data Security",
-      "aismm_target_level": 4,
-      "summary": "Use this skill when building or auditing a RAG system that must enforce fine-grained document-level permissions, ensuring each user retrieves only documents their identity and role permit them to see."
-    },
-    {
-      "id": "implementing-prompt-and-response-logging",
-      "name": "implementing-prompt-and-response-logging",
-      "version": "1.0",
-      "domain": "LOG",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "LOG-03",
-        "LOG-05"
-      ],
-      "ssrm_ownership": "AP-Owned",
-      "aismm_category": "Security Monitoring",
-      "aismm_target_level": 3,
-      "summary": "Use this skill when you need to implement structured, tamper-resistant logging of LLM prompts and responses to support security monitoring, incident investigation, and compliance audits."
-    },
-    {
-      "id": "investigating-compromised-ai-agent-credentials",
-      "name": "investigating-compromised-ai-agent-credentials",
-      "version": "1.0",
-      "domain": "SEF",
-      "pillar": "security_from_ai",
-      "aicm_controls": [
-        "SEF-04",
-        "IAM-08"
-      ],
-      "ssrm_ownership": "Shared AP-AIC",
-      "aismm_category": "Incident Response",
-      "aismm_target_level": 4,
-      "summary": "Use this skill when you suspect or have confirmed that credentials used by an AI agent have been stolen or misused, and need to contain the incident, reconstruct the timeline, and restore secure operations."
-    },
-    {
-      "id": "isolating-ai-training-clusters",
-      "name": "isolating-ai-training-clusters",
-      "version": "1.0",
-      "domain": "DCS",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "DCS-07",
-        "I&S-04"
-      ],
-      "ssrm_ownership": "CSP-Owned",
-      "aismm_category": "Infrastructure Security & Resilience",
-      "aismm_target_level": 3,
-      "summary": "Use this skill when you need to network-isolate an AI training cluster to prevent training data and model weights from being accessible outside the training environment, and to limit the blast radius of a compromise."
-    },
-    {
-      "id": "managing-agent-credential-rotation-and-revocation",
-      "name": "managing-agent-credential-rotation-and-revocation",
-      "version": "1.0",
-      "domain": "IAM",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "IAM-08",
-        "CEK-03"
-      ],
-      "ssrm_ownership": "AP-Owned",
-      "aismm_category": "IAM",
-      "aismm_target_level": 3,
-      "summary": "Use this skill when you need to rotate API keys or secrets used by AI agents on a schedule, or immediately revoke credentials when an agent is compromised, decommissioned, or behaves anomalously."
-    },
-    {
-      "id": "mapping-controls-to-iso-42001",
-      "name": "mapping-controls-to-iso-42001",
-      "version": "1.0",
-      "domain": "GRC",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "GRC-01",
-        "A&A-04"
-      ],
-      "ssrm_ownership": "AIC-Owned",
-      "aismm_category": "Governance",
-      "aismm_target_level": 3,
-      "summary": "Use this skill when you need to map your organization's existing security and AI controls to ISO/IEC 42001 requirements and produce a gap analysis and compliance coverage report."
-    },
-    {
-      "id": "monitoring-model-drift-and-degradation",
-      "name": "monitoring-model-drift-and-degradation",
-      "version": "1.0",
-      "domain": "MDS",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "MDS-07",
-        "LOG-08"
-      ],
-      "ssrm_ownership": "MP-Owned",
-      "aismm_category": "Model Security",
-      "aismm_target_level": 4,
-      "summary": "Use this skill when you need to detect data drift, concept drift, or performance degradation in a deployed AI model through continuous monitoring, alerting, and automated rollback triggers."
-    },
-    {
-      "id": "protecting-model-artifacts-with-key-management",
-      "name": "protecting-model-artifacts-with-key-management",
-      "version": "1.0",
-      "domain": "CEK",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "CEK-03",
-        "CEK-08"
-      ],
-      "ssrm_ownership": "CSP-Owned",
-      "aismm_category": "Infrastructure Security & Resilience",
-      "aismm_target_level": 3,
-      "summary": "Use this skill when you need to encrypt AI model artifacts at rest using customer-managed keys, implement key rotation, and control access to model weights through a key management service."
-    },
-    {
-      "id": "provisioning-non-human-identities-for-ai-agents",
-      "name": "provisioning-non-human-identities-for-ai-agents",
-      "version": "1.0",
-      "domain": "IAM",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "IAM-03",
-        "IAM-12"
-      ],
-      "ssrm_ownership": "AP-Owned",
-      "aismm_category": "IAM",
-      "aismm_target_level": 4,
-      "summary": "Use this skill when you need to create, scope, and govern dedicated non-human identities for AI agents \u2014 service accounts, workload identities, or machine credentials \u2014 separate from human user accounts."
-    },
-    {
-      "id": "red-teaming-llm-applications",
-      "name": "red-teaming-llm-applications",
-      "version": "1.0",
-      "domain": "TVM",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "TVM-03",
-        "MDS-05"
-      ],
-      "ssrm_ownership": "Shared AP-AIC",
-      "aismm_category": "App Security",
-      "aismm_target_level": 4,
-      "summary": "Use this skill when you need to conduct a structured red-team assessment of an LLM application, systematically probing for jailbreaks, data extraction, harmful output, and safety bypass vulnerabilities."
-    },
-    {
-      "id": "scanning-ai-bom-for-vulnerable-components",
-      "name": "scanning-ai-bom-for-vulnerable-components",
-      "version": "1.0",
-      "domain": "TVM",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "TVM-04",
-        "STA-09"
-      ],
-      "ssrm_ownership": "AP-Owned",
-      "aismm_category": "AI Supported Development & Supply Chain Security",
-      "aismm_target_level": 4,
-      "summary": "Use this skill when you need to generate an AI Bill of Materials and scan it for known CVEs, malicious packages, and supply chain risks in ML frameworks, model dependencies, and data pipeline libraries."
-    },
-    {
-      "id": "scanning-training-and-grounding-data-for-pii",
-      "name": "scanning-training-and-grounding-data-for-pii",
-      "version": "1.0",
-      "domain": "DSP",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "DSP-10",
-        "DSP-13"
-      ],
-      "ssrm_ownership": "Shared AP-AIC",
-      "aismm_category": "Data Security",
-      "aismm_target_level": 3,
-      "summary": "Use this skill when you need to detect, classify, and remediate personally identifiable information in datasets before they are used to train, fine-tune, or ground an AI model."
-    },
-    {
-      "id": "scoping-mcp-tool-authorization-least-privilege",
-      "name": "scoping-mcp-tool-authorization-least-privilege",
-      "version": "1.0",
-      "domain": "IAM",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "IAM-09"
-      ],
-      "ssrm_ownership": "AP-Owned",
-      "aismm_category": "IAM",
-      "aismm_target_level": 4,
-      "summary": "Use this skill when you need to apply least-privilege principles to MCP tool grants, ensuring each AI agent can invoke only the specific tools and parameter ranges required for its assigned task."
-    },
-    {
-      "id": "securing-mcp-server-and-tool-boundaries",
-      "name": "securing-mcp-server-and-tool-boundaries",
-      "version": "1.0",
-      "domain": "AIS",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "AIS-10",
-        "IAM-09"
-      ],
-      "ssrm_ownership": "Shared OSP-AP",
-      "aismm_category": "App Security",
-      "aismm_target_level": 3,
-      "summary": "Use this skill when you need to harden a Model Context Protocol server and its exposed tools against unauthorized invocation, privilege escalation, and data exfiltration through agent-initiated tool calls."
-    },
-    {
-      "id": "securing-rag-pipelines-against-data-leakage",
-      "name": "securing-rag-pipelines-against-data-leakage",
-      "version": "1.0",
-      "domain": "DSP",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "DSP-07",
-        "DSP-10"
-      ],
-      "ssrm_ownership": "AP-Owned",
-      "aismm_category": "Data Security",
-      "aismm_target_level": 4,
-      "summary": "Use this skill when you need to audit, harden, or redesign a Retrieval-Augmented Generation pipeline to prevent sensitive documents from leaking to unauthorized users through LLM responses."
-    },
-    {
-      "id": "validating-training-data-provenance-and-lineage",
-      "name": "validating-training-data-provenance-and-lineage",
-      "version": "1.0",
-      "domain": "DSP",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "DSP-03",
-        "STA-07"
-      ],
-      "ssrm_ownership": "MP-Owned",
-      "aismm_category": "Data Security",
-      "aismm_target_level": 3,
-      "summary": "Use this skill when you need to establish or verify the chain of custody for a training dataset \u2014 confirming source, transformation history, and licensing before a model is trained or released."
-    },
-    {
-      "id": "verifying-model-integrity-and-provenance-signing",
-      "name": "verifying-model-integrity-and-provenance-signing",
-      "version": "1.0",
-      "domain": "MDS",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "MDS-03",
-        "CCC-04"
-      ],
-      "ssrm_ownership": "MP-Owned",
-      "aismm_category": "Model Security",
-      "aismm_target_level": 4,
-      "summary": "Use this skill when you need to cryptographically verify that a model artifact has not been tampered with since it was produced, and to sign new model artifacts so downstream consumers can establish provenance."
-    },
-    {
-      "id": "verifying-open-model-supply-chain-integrity",
-      "name": "verifying-open-model-supply-chain-integrity",
-      "version": "1.0",
-      "domain": "STA",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "STA-07",
-        "MDS-03"
-      ],
-      "ssrm_ownership": "Shared Across Supply Chain",
-      "aismm_category": "AI Supported Development & Supply Chain Security",
-      "aismm_target_level": 3,
-      "summary": "Use this skill when you need to verify that an open-weight model downloaded from a public registry has not been tampered with, backdoored, or substituted before it is deployed in your environment."
-    },
-    {
-      "id": "versioning-models-and-system-prompts-with-rollback",
-      "name": "versioning-models-and-system-prompts-with-rollback",
-      "version": "1.0",
-      "domain": "CCC",
-      "pillar": "security_for_ai",
-      "aicm_controls": [
-        "CCC-03",
-        "CCC-04"
-      ],
-      "ssrm_ownership": "AP-Owned",
-      "aismm_category": "Organization Management",
-      "aismm_target_level": 3,
-      "summary": "Use this skill when you need to implement version control and rollback capability for AI model artifacts and system prompts, so that a bad deployment can be reverted within minutes without manual intervention."
+      "summary": "Use this skill when you need to systematically evaluate an AI model for safety failures, demographic bias, and harmful output potential before releasing it to production or a broader audience.",
+      "pillar": "security_from_ai"
     },
     {
       "id": "fitting-ai-triage-to-known-noise-sources",
       "name": "fitting-ai-triage-to-known-noise-sources",
       "version": "1.0",
       "domain": "LOG",
-      "pillar": "ai_for_security",
       "aicm_controls": [
         "LOG-05",
         "GRC-04"
@@ -833,7 +458,382 @@
       "ssrm_ownership": "AP-Owned",
       "aismm_category": "Security Monitoring",
       "aismm_target_level": 4,
-      "summary": "Use this skill when an AI-assisted alert triage system is flagging too many known-benign patterns as incidents, and you need to fit its decision policy to your organization's specific noise sources \u2014 vulnerability scanners, backup service accounts, VPN egress ranges, approved tooling \u2014 without suppressing genuine true positives."
+      "summary": "Use this skill when an AI-assisted alert triage system is flagging too many known-benign patterns as incidents, and you need to fit its decision policy to your organization's specific noise sources — vulnerability scanners, backup service accounts, VPN egress ranges, approved tooling — without suppressing genuine true positives.",
+      "pillar": "ai_for_security"
+    },
+    {
+      "id": "generating-an-ai-bill-of-materials",
+      "name": "generating-an-ai-bill-of-materials",
+      "version": "1.0",
+      "domain": "STA",
+      "aicm_controls": [
+        "STA-07",
+        "STA-09"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "AI Supported Development & Supply Chain Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to produce a machine-readable AI Bill of Materials that inventories all models, datasets, libraries, and supply chain dependencies for an AI system deployment.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "governing-ai-coding-assistant-endpoints",
+      "name": "governing-ai-coding-assistant-endpoints",
+      "version": "1.0",
+      "domain": "UEM",
+      "aicm_controls": [
+        "UEM-03",
+        "UEM-09"
+      ],
+      "ssrm_ownership": "AIC-Owned",
+      "aismm_category": "Organization Management",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to govern which AI coding assistant endpoints developers may connect to from managed devices, preventing data leakage to unapproved external AI services through IDE plugins and CLI tools.",
+      "pillar": "security_from_ai"
+    },
+    {
+      "id": "hardening-agent-orchestration-against-drift",
+      "name": "hardening-agent-orchestration-against-drift",
+      "version": "1.0",
+      "domain": "AIS",
+      "aicm_controls": [
+        "AIS-08",
+        "AIS-09"
+      ],
+      "ssrm_ownership": "OSP-Owned",
+      "aismm_category": "App Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to prevent an AI agent orchestration system from drifting outside its intended scope through goal hijacking, runaway loops, or unauthorized sub-agent delegation.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "implementing-content-safety-output-filtering",
+      "name": "implementing-content-safety-output-filtering",
+      "version": "1.0",
+      "domain": "AIS",
+      "aicm_controls": [
+        "AIS-08",
+        "MDS-07"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "App Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when a generative AI application exposes free-form output to end users and you need to filter that output through a content-safety classifier before it reaches them — blocking hate, harassment, sexual, violence, self-harm, or illegal content per a published policy, with the same policy enforced regardless of which model produced the output.",
+      "pillar": "security_from_ai"
+    },
+    {
+      "id": "implementing-kill-switch-and-rollback-for-autonomous-agents",
+      "name": "implementing-kill-switch-and-rollback-for-autonomous-agents",
+      "version": "1.0",
+      "domain": "SEF",
+      "aicm_controls": [
+        "SEF-03",
+        "SEF-06"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "Incident Response",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when an autonomous AI agent holds write, deploy, or state-changing permissions in production and you need an emergency-halt and recovery capability — a globally-accessible kill switch the SOC can flip within seconds and a paired rollback artifact per reversible action, with a stricter rollback surface at higher autonomy tiers.",
+      "pillar": "security_from_ai"
+    },
+    {
+      "id": "implementing-on-behalf-of-delegation-and-consent",
+      "name": "implementing-on-behalf-of-delegation-and-consent",
+      "version": "1.0",
+      "domain": "IAM",
+      "aicm_controls": [
+        "IAM-05",
+        "IAM-13"
+      ],
+      "ssrm_ownership": "Shared AP-AIC",
+      "aismm_category": "IAM",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when an AI agent must act on behalf of a human user, requiring explicit OAuth delegation flows, consent capture, and auditable on-behalf-of token chains to prevent privilege escalation.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "implementing-permission-aware-retrieval-for-rag",
+      "name": "implementing-permission-aware-retrieval-for-rag",
+      "version": "1.0",
+      "domain": "DSP",
+      "aicm_controls": [
+        "DSP-07",
+        "IAM-05"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "Data Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when building or auditing a RAG system that must enforce fine-grained document-level permissions, ensuring each user retrieves only documents their identity and role permit them to see.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "implementing-prompt-and-response-logging",
+      "name": "implementing-prompt-and-response-logging",
+      "version": "1.0",
+      "domain": "LOG",
+      "aicm_controls": [
+        "LOG-03",
+        "LOG-05"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "Security Monitoring",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to implement structured, tamper-resistant logging of LLM prompts and responses to support security monitoring, incident investigation, and compliance audits.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "investigating-compromised-ai-agent-credentials",
+      "name": "investigating-compromised-ai-agent-credentials",
+      "version": "1.0",
+      "domain": "SEF",
+      "aicm_controls": [
+        "SEF-04",
+        "IAM-08"
+      ],
+      "ssrm_ownership": "Shared AP-AIC",
+      "aismm_category": "Incident Response",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you suspect or have confirmed that credentials used by an AI agent have been stolen or misused, and need to contain the incident, reconstruct the timeline, and restore secure operations.",
+      "pillar": "security_from_ai"
+    },
+    {
+      "id": "isolating-ai-training-clusters",
+      "name": "isolating-ai-training-clusters",
+      "version": "1.0",
+      "domain": "DCS",
+      "aicm_controls": [
+        "DCS-07",
+        "I&S-04"
+      ],
+      "ssrm_ownership": "CSP-Owned",
+      "aismm_category": "Infrastructure Security & Resilience",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to network-isolate an AI training cluster to prevent training data and model weights from being accessible outside the training environment, and to limit the blast radius of a compromise.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "managing-agent-credential-rotation-and-revocation",
+      "name": "managing-agent-credential-rotation-and-revocation",
+      "version": "1.0",
+      "domain": "IAM",
+      "aicm_controls": [
+        "IAM-08",
+        "CEK-03"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "IAM",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to rotate API keys or secrets used by AI agents on a schedule, or immediately revoke credentials when an agent is compromised, decommissioned, or behaves anomalously.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "mapping-controls-to-iso-42001",
+      "name": "mapping-controls-to-iso-42001",
+      "version": "1.0",
+      "domain": "GRC",
+      "aicm_controls": [
+        "GRC-01",
+        "A&A-04"
+      ],
+      "ssrm_ownership": "AIC-Owned",
+      "aismm_category": "Governance",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to map your organization's existing security and AI controls to ISO/IEC 42001 requirements and produce a gap analysis and compliance coverage report.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "monitoring-model-drift-and-degradation",
+      "name": "monitoring-model-drift-and-degradation",
+      "version": "1.0",
+      "domain": "MDS",
+      "aicm_controls": [
+        "MDS-07",
+        "LOG-08"
+      ],
+      "ssrm_ownership": "MP-Owned",
+      "aismm_category": "Model Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to detect data drift, concept drift, or performance degradation in a deployed AI model through continuous monitoring, alerting, and automated rollback triggers.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "protecting-model-artifacts-with-key-management",
+      "name": "protecting-model-artifacts-with-key-management",
+      "version": "1.0",
+      "domain": "CEK",
+      "aicm_controls": [
+        "CEK-03",
+        "CEK-08"
+      ],
+      "ssrm_ownership": "CSP-Owned",
+      "aismm_category": "Infrastructure Security & Resilience",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to encrypt AI model artifacts at rest using customer-managed keys, implement key rotation, and control access to model weights through a key management service.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "provisioning-non-human-identities-for-ai-agents",
+      "name": "provisioning-non-human-identities-for-ai-agents",
+      "version": "1.0",
+      "domain": "IAM",
+      "aicm_controls": [
+        "IAM-03",
+        "IAM-12"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "IAM",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to create, scope, and govern dedicated non-human identities for AI agents — service accounts, workload identities, or machine credentials — separate from human user accounts.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "red-teaming-llm-applications",
+      "name": "red-teaming-llm-applications",
+      "version": "1.0",
+      "domain": "TVM",
+      "aicm_controls": [
+        "TVM-03",
+        "MDS-05"
+      ],
+      "ssrm_ownership": "Shared AP-AIC",
+      "aismm_category": "App Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to conduct a structured red-team assessment of an LLM application, systematically probing for jailbreaks, data extraction, harmful output, and safety bypass vulnerabilities.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "scanning-ai-bom-for-vulnerable-components",
+      "name": "scanning-ai-bom-for-vulnerable-components",
+      "version": "1.0",
+      "domain": "TVM",
+      "aicm_controls": [
+        "TVM-04",
+        "STA-09"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "AI Supported Development & Supply Chain Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to generate an AI Bill of Materials and scan it for known CVEs, malicious packages, and supply chain risks in ML frameworks, model dependencies, and data pipeline libraries.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "scanning-training-and-grounding-data-for-pii",
+      "name": "scanning-training-and-grounding-data-for-pii",
+      "version": "1.0",
+      "domain": "DSP",
+      "aicm_controls": [
+        "DSP-10",
+        "DSP-13"
+      ],
+      "ssrm_ownership": "Shared AP-AIC",
+      "aismm_category": "Data Security",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to detect, classify, and remediate personally identifiable information in datasets before they are used to train, fine-tune, or ground an AI model.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "scoping-mcp-tool-authorization-least-privilege",
+      "name": "scoping-mcp-tool-authorization-least-privilege",
+      "version": "1.0",
+      "domain": "IAM",
+      "aicm_controls": [
+        "IAM-09"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "IAM",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to apply least-privilege principles to MCP tool grants, ensuring each AI agent can invoke only the specific tools and parameter ranges required for its assigned task.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "securing-mcp-server-and-tool-boundaries",
+      "name": "securing-mcp-server-and-tool-boundaries",
+      "version": "1.0",
+      "domain": "AIS",
+      "aicm_controls": [
+        "AIS-10",
+        "IAM-09"
+      ],
+      "ssrm_ownership": "Shared OSP-AP",
+      "aismm_category": "App Security",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to harden a Model Context Protocol server and its exposed tools against unauthorized invocation, privilege escalation, and data exfiltration through agent-initiated tool calls.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "securing-rag-pipelines-against-data-leakage",
+      "name": "securing-rag-pipelines-against-data-leakage",
+      "version": "1.0",
+      "domain": "DSP",
+      "aicm_controls": [
+        "DSP-07",
+        "DSP-10"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "Data Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to audit, harden, or redesign a Retrieval-Augmented Generation pipeline to prevent sensitive documents from leaking to unauthorized users through LLM responses.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "validating-training-data-provenance-and-lineage",
+      "name": "validating-training-data-provenance-and-lineage",
+      "version": "1.0",
+      "domain": "DSP",
+      "aicm_controls": [
+        "DSP-03",
+        "STA-07"
+      ],
+      "ssrm_ownership": "MP-Owned",
+      "aismm_category": "Data Security",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to establish or verify the chain of custody for a training dataset — confirming source, transformation history, and licensing before a model is trained or released.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "verifying-model-integrity-and-provenance-signing",
+      "name": "verifying-model-integrity-and-provenance-signing",
+      "version": "1.0",
+      "domain": "MDS",
+      "aicm_controls": [
+        "MDS-03",
+        "CCC-04"
+      ],
+      "ssrm_ownership": "MP-Owned",
+      "aismm_category": "Model Security",
+      "aismm_target_level": 4,
+      "summary": "Use this skill when you need to cryptographically verify that a model artifact has not been tampered with since it was produced, and to sign new model artifacts so downstream consumers can establish provenance.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "verifying-open-model-supply-chain-integrity",
+      "name": "verifying-open-model-supply-chain-integrity",
+      "version": "1.0",
+      "domain": "STA",
+      "aicm_controls": [
+        "STA-07",
+        "MDS-03"
+      ],
+      "ssrm_ownership": "Shared Across Supply Chain",
+      "aismm_category": "AI Supported Development & Supply Chain Security",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to verify that an open-weight model downloaded from a public registry has not been tampered with, backdoored, or substituted before it is deployed in your environment.",
+      "pillar": "security_for_ai"
+    },
+    {
+      "id": "versioning-models-and-system-prompts-with-rollback",
+      "name": "versioning-models-and-system-prompts-with-rollback",
+      "version": "1.0",
+      "domain": "CCC",
+      "aicm_controls": [
+        "CCC-03",
+        "CCC-04"
+      ],
+      "ssrm_ownership": "AP-Owned",
+      "aismm_category": "Organization Management",
+      "aismm_target_level": 3,
+      "summary": "Use this skill when you need to implement version control and rollback capability for AI model artifacts and system prompts, so that a bad deployment can be reverted within minutes without manual intervention.",
+      "pillar": "security_for_ai"
     }
   ]
 }
